@@ -1,0 +1,6 @@
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+	.copyright{
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+	}
+}
