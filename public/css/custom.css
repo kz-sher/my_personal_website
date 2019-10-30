@@ -1,5 +1,6 @@
 .section{
 	height: 100vh;
+	overflow: hidden;
 }
 
 .section1{
@@ -9,6 +10,10 @@
 	align-items: center;
 }
 
+.section1 .fadeInUp{
+	animation-delay: 1.5s;
+}
+
 .scroll-down-indicator{
 	position: absolute;
 	display: flex;
@@ -16,4 +21,87 @@
 	align-items: center;
 	width: 100%;
 	bottom: 3%;
+}
+
+.logo-text{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.logo-text .main-text{
+	stroke: #414141;
+}
+
+.logo-text .dashline{
+	stroke-dasharray: 100;
+	opacity: 0;
+	animation: show 1s linear 1s forwards, line-animation 12s linear 1.2s infinite;
+}
+
+.text-k .main-text{
+	stroke-dasharray: 728.0239868164062;
+	stroke-dashoffset: 728.0239868164062;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-z .main-text{
+	stroke-dasharray: 644.954345703125;
+	stroke-dashoffset: 644.954345703125;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-s .main-text{
+	stroke-dasharray: 705.8015747070312;
+	stroke-dashoffset: 705.8015747070312;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-h .main-text{
+	stroke-dasharray: 762.400634765625;
+	stroke-dashoffset: 762.400634765625;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.lightbulb{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Animation */
+:root {
+    --animation-time: 2s; 
+}
+
+.flicker{
+	animation: blink var(--animation-time) ease alternate infinite;
+}
+
+.blink{
+	animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes line-animation{
+	to {
+		stroke-dashoffset: 800;
+	}
+}
+
+@keyframes connect-text{
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes blink {
+	50% {
+	  opacity: 0;
+	}
+}
+
+
+@keyframes show {
+	100% {
+	  opacity: 1;
+	}
 }
