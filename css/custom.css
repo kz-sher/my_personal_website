@@ -1,0 +1,163 @@
+#canvas-club {
+	position: fixed;
+	background-color: #141414;
+}
+
+.section {
+	overflow: hidden !important;
+	z-index: 5;
+}
+
+#fp-nav span {
+	background: white !important;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.fadeInUp{
+	animation-delay: 1.5s;
+}
+
+.footer {
+	margin-bottom: 2rem;
+}
+
+#nav-modal {
+	height: 100%;
+	width: 100%;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	background: black;
+	opacity: 0.95;
+}
+
+.cross {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+}
+
+.nav-modal-content {
+	display: flex;
+	align-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.nav-modal-copyright {
+	display: none;
+}
+
+.nav-modal-open {
+	display: block;
+}
+
+#scroll-down-indicator{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	bottom: 1rem;
+}
+
+.logo-text{
+	margin-left: 5px;
+	margin-right: 5px;
+	z-index: 10;
+}
+
+.logo-text .dashline{
+	stroke-dasharray: 100;
+	opacity: 0;
+	animation: show 1s linear 1s forwards, line-animation 12s linear 1.2s infinite;
+}
+
+.text-k .main-text{
+	stroke-dasharray: 728.0239868164062;
+	stroke-dashoffset: 728.0239868164062;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-z .main-text{
+	stroke-dasharray: 644.954345703125;
+	stroke-dashoffset: 644.954345703125;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-s .main-text{
+	stroke-dasharray: 705.8015747070312;
+	stroke-dashoffset: 705.8015747070312;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-h .main-text{
+	stroke-dasharray: 762.400634765625;
+	stroke-dashoffset: 762.400634765625;
+	animation: connect-text 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
+}
+
+.text-deco-box1{
+	opacity: 0;
+	animation: show 1s linear 1s forwards, blink var(--animation-time) ease alternate 1.2s infinite;
+}
+
+.text-deco-box2{
+	position: absolute;
+	bottom: 2.5rem;
+	right: 2rem;
+}
+
+.roadtrack{
+	position: absolute;
+	bottom: 5;
+}
+
+/* Animation */
+:root {
+    --animation-time: 0.7s; 
+}
+
+.flicker{
+	animation: blink var(--animation-time) ease alternate 1.2s infinite;
+}
+
+.blink{
+	animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes line-animation{
+	to {
+		stroke-dashoffset: 800;
+	}
+}
+
+@keyframes connect-text{
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes blink {
+	0%{
+		opacity: 1;
+	}
+	50% {
+	  opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes show {
+	100% {
+	  opacity: 1;
+	}
+}

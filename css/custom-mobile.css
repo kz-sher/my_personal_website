@@ -1,0 +1,32 @@
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+	
+	.footer {
+		margin-bottom: 0;
+	}
+
+	#scroll-down-indicator{
+		bottom: 4rem;
+	}
+
+	.copyright{
+		display: none;
+	}
+	
+	.nav-modal-copyright {
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		display: block;
+	}
+
+	.text-deco-box2{
+		bottom: 1.5rem;
+	}
+
+	.social-media {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		font-size: 1.2rem;
+	}
+}

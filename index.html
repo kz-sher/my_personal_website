@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>KZSH</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href='css/custom.css' rel="stylesheet">
+        <link href='css/custom-mobile.css' rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    </head>
+    <body>
+        <canvas id="canvas-club"></canvas>
+        <!-- Header -->
+        <nav class="header navbar bg-transparent position-fixed fixed-top">
+            <div class="container-fluid col-md-12 mt-4">
+                <svg class="menu animated fadeInUp" width="43" height="23" viewBox="0 0 43 23" xlmns="http://www.w3.org/2000/svg">
+                    <line y1="1.5" x2="43" y2="1.5" stroke="white" stroke-width="3" />
+                    <line y1="11.5" x2="28" y2="11.5" stroke="white" stroke-width="3" />
+                    <line y1="21.5" x2="16" y2="21.5" stroke="white" stroke-width="3" />
+                </svg>
+
+                <div class="navbar-nav ml-auto animated fadeInUp">
+                    <a class="btn btn-success">Get Started</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Nav Modal -->
+        <div id="nav-modal">
+            <div class="container-fluid col-md-12 h-100 d-flex">
+                <svg class="cross nav-modal-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve" width="38" height="38" class="">
+                    <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88   c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242   C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879   s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+                </svg>
+                <div class="nav-modal-content">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-modal-close text-white" href="#aboutme">
+                                <span class="h1">About Me</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-modal-close text-white" href="#">
+                                <span class="h1">My Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-modal-close text-white" href="#">
+                                <span class="h1">Work Experiences</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-modal-close text-white" href="#">
+                                <span class="h1">Job Interests</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-modal-copyright">
+                    <span class="text-white">© 2019 Kz Sherwin.</span>
+                </div>
+                <svg class="text-deco-box2 flicker" width="40" height="170" viewBox="0 0 40 170">
+                        <defs>
+                            <filter id="sofGlow2" height="200%" width="250%" x="-75%" y="-75%">
+                                <!-- Thicken out the original shape -->
+                                <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+                        
+                                <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+                                <feGaussianBlur in="thicken" stdDeviation="3" result="blurred" />
+                        
+                                <!-- Change the colour -->
+                                <feFlood flood-color="rgba(250, 0, 0, 0.5)" result="glowColor" />
+                        
+                                <!-- Color in the glows -->
+                                <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+                        
+                                <!--	Layer the effects together -->
+                                <feMerge>
+                                    <feMergeNode in="softGlow_colored"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>                
+                        <rect x="25%" y="140" width="50%" height="20" fill="red" filter="url(#sofGlow2)" />
+                    </svg>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div id="app">
+
+            <!-- Section 1-->
+            <section class="section s1">
+                <div class="container">
+                    <!-- Logo Text -->
+                    <svg class="logo-text text-k" width="117" height="150" viewBox="0 0 117 150" fill="#141414" xmlns="http://www.w3.org/2000/svg">
+                        <path class="main-text" d="M79.2808 146.675L80.0254 147.5H81.1367H104.937H110.62L106.78 143.311L44.5187 75.3896L106.19 7.27795L109.973 3.09998H104.337H81.3368H80.2164L79.4708 3.9362L26.2368 63.6396V5.59998V3.09998H23.7368H5.53674H3.03674V5.59998V145V147.5H5.53674H23.7368H26.2368V145V87.9014L79.2808 146.675Z" stroke="#414141" stroke-width="3"/>
+                        <path class="dashline" d="M79.2808 146.675L80.0254 147.5H81.1367H104.937H110.62L106.78 143.311L44.5187 75.3896L106.19 7.27795L109.973 3.09998H104.337H81.3368H80.2164L79.4708 3.9362L26.2368 63.6396V5.59998V3.09998H23.7368H5.53674H3.03674V5.59998V145V147.5H5.53674H23.7368H26.2368V145V87.9014L79.2808 146.675Z" stroke="white" stroke-width="3"/>
+                    </svg>
+                    <svg class="logo-text text-z" width="101" height="150" viewBox="0 0 101 150" fill="#141414" xmlns="http://www.w3.org/2000/svg">
+                        <path class="main-text" d="M97.6985 129.2V126.7H95.1985H31.6863L96.9241 21.3159L97.2984 20.7112V20V5.59998V3.09998H94.7984H6.39845H3.89845V5.59998V21.4V23.9H6.39845H68.7106L3.47279 129.284L3.09845 129.889V130.6V145V147.5H5.59845H95.1985H97.6985V145V129.2Z" stroke="#414141" stroke-width="3"/>
+                        <path class="dashline" d="M97.6985 129.2V126.7H95.1985H31.6863L96.9241 21.3159L97.2984 20.7112V20V5.59998V3.09998H94.7984H6.39845H3.89845V5.59998V21.4V23.9H6.39845H68.7106L3.47279 129.284L3.09845 129.889V130.6V145V147.5H5.59845H95.1985H97.6985V145V129.2Z" stroke="white" stroke-width="3"/>
+                    </svg>
+                    <svg class="logo-text text-s" width="106" height="154" viewBox="0 0 106 154" fill="#141414" xmlns="http://www.w3.org/2000/svg">
+                        <path class="main-text" d="M28.0583 145.869L28.0834 145.88L28.1087 145.891C35.8012 149.248 44.4157 150.9 53.9086 150.9C63.8343 150.9 72.5842 148.969 80.0764 145.01C87.4881 141.095 93.1856 135.931 97.0523 129.486C100.878 123.11 102.809 116.267 102.809 109C102.809 99.8471 100.73 92.3063 96.2808 86.6635C92.048 81.1648 86.925 77.092 80.9166 74.5121C75.1561 71.9083 67.6285 69.3387 58.3782 66.7913C50.8353 64.6739 44.9971 62.8356 40.8318 61.2762C37.0488 59.6829 33.8385 57.4357 31.1714 54.5324C28.8557 51.8748 27.6086 48.3709 27.6086 43.8C27.6086 37.3651 29.7568 32.6659 33.8769 29.3469L33.8931 29.3338L33.909 29.3205C38.1683 25.7712 43.7621 23.9 50.9086 23.9C58.6136 23.9 64.5281 25.8508 68.903 29.5163L68.9185 29.5292L68.9341 29.5419C73.4634 33.2143 75.8556 37.3317 76.4279 41.9101L76.7016 44.1H78.9086H98.9086H101.668L101.396 41.3543C100.264 29.8907 95.1995 20.5956 86.2513 13.6327C77.4468 6.67745 66.1957 3.29999 52.7086 3.29999C43.3458 3.29999 34.9181 4.95317 27.4773 8.3226L27.4691 8.32631L27.4609 8.33008C20.1426 11.7078 14.3665 16.5348 10.2212 22.8242C6.06329 29.1327 4.00859 36.3526 4.00859 44.4C4.00859 53.4244 6.02229 60.9357 10.3024 66.6917L10.324 66.7207L10.3464 66.7491C14.5789 72.1103 19.6321 76.1113 25.5036 78.6891L25.5137 78.6935L25.5238 78.6978C31.2818 81.1656 38.8113 83.6015 48.0696 86.017C55.4905 88.0049 61.3193 89.8427 65.5923 91.526C69.6478 93.1236 72.9775 95.4353 75.6318 98.4516C78.0861 101.241 79.4086 104.946 79.4086 109.8C79.4086 115.885 77.1822 120.792 72.6732 124.709C68.3254 128.469 62.1746 130.5 53.9086 130.5C45.2393 130.5 39.0089 128.402 34.8242 124.581C30.5999 120.467 28.202 115.488 27.5957 109.546L27.3665 107.3H25.1086H5.70859H3.16434L3.20897 109.844C3.35054 117.913 5.62577 125.139 10.0649 131.44L10.0727 131.451L10.0806 131.462C14.4948 137.585 20.5172 142.377 28.0583 145.869Z" stroke="#414141" stroke-width="3"/>
+                        <path class="dashline" d="M28.0583 145.869L28.0834 145.88L28.1087 145.891C35.8012 149.248 44.4157 150.9 53.9086 150.9C63.8343 150.9 72.5842 148.969 80.0764 145.01C87.4881 141.095 93.1856 135.931 97.0523 129.486C100.878 123.11 102.809 116.267 102.809 109C102.809 99.8471 100.73 92.3063 96.2808 86.6635C92.048 81.1648 86.925 77.092 80.9166 74.5121C75.1561 71.9083 67.6285 69.3387 58.3782 66.7913C50.8353 64.6739 44.9971 62.8356 40.8318 61.2762C37.0488 59.6829 33.8385 57.4357 31.1714 54.5324C28.8557 51.8748 27.6086 48.3709 27.6086 43.8C27.6086 37.3651 29.7568 32.6659 33.8769 29.3469L33.8931 29.3338L33.909 29.3205C38.1683 25.7712 43.7621 23.9 50.9086 23.9C58.6136 23.9 64.5281 25.8508 68.903 29.5163L68.9185 29.5292L68.9341 29.5419C73.4634 33.2143 75.8556 37.3317 76.4279 41.9101L76.7016 44.1H78.9086H98.9086H101.668L101.396 41.3543C100.264 29.8907 95.1995 20.5956 86.2513 13.6327C77.4468 6.67745 66.1957 3.29999 52.7086 3.29999C43.3458 3.29999 34.9181 4.95317 27.4773 8.3226L27.4691 8.32631L27.4609 8.33008C20.1426 11.7078 14.3665 16.5348 10.2212 22.8242C6.06329 29.1327 4.00859 36.3526 4.00859 44.4C4.00859 53.4244 6.02229 60.9357 10.3024 66.6917L10.324 66.7207L10.3464 66.7491C14.5789 72.1103 19.6321 76.1113 25.5036 78.6891L25.5137 78.6935L25.5238 78.6978C31.2818 81.1656 38.8113 83.6015 48.0696 86.017C55.4905 88.0049 61.3193 89.8427 65.5923 91.526C69.6478 93.1236 72.9775 95.4353 75.6318 98.4516C78.0861 101.241 79.4086 104.946 79.4086 109.8C79.4086 115.885 77.1822 120.792 72.6732 124.709C68.3254 128.469 62.1746 130.5 53.9086 130.5C45.2393 130.5 39.0089 128.402 34.8242 124.581C30.5999 120.467 28.202 115.488 27.5957 109.546L27.3665 107.3H25.1086H5.70859H3.16434L3.20897 109.844C3.35054 117.913 5.62577 125.139 10.0649 131.44L10.0727 131.451L10.0806 131.462C14.4948 137.585 20.5172 142.377 28.0583 145.869Z" stroke="white" stroke-width="3"/>
+                    </svg>
+                    <svg class="logo-text text-h" width="119" height="150" viewBox="0 0 119 150" fill="#141414" xmlns="http://www.w3.org/2000/svg">
+                        <path class="main-text" d="M115.562 5.59998V3.09998H113.062H94.8618H92.3618V5.59998V64.3H26.3618V5.59998V3.09998H23.8618H5.66174H3.16174V5.59998V145V147.5H5.66174H23.8618H26.3618V145V84.3H92.3618V145V147.5H94.8618H113.062H115.562V145V5.59998Z" stroke="#414141" stroke-width="3"/>
+                        <path class="dashline" d="M115.562 5.59998V3.09998H113.062H94.8618H92.3618V5.59998V64.3H26.3618V5.59998V3.09998H23.8618H5.66174H3.16174V5.59998V145V147.5H5.66174H23.8618H26.3618V145V84.3H92.3618V145V147.5H94.8618H113.062H115.562V145V5.59998Z" stroke="white" stroke-width="3"/>
+                    </svg>
+                    <svg class="text-deco-box1" width="40" height="170" viewBox="0 0 40 170">
+                        <defs>
+                            <filter id="sofGlow" height="200%" width="250%" x="-75%" y="-75%">
+                                <!-- Thicken out the original shape -->
+                                <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+                        
+                                <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+                                <feGaussianBlur in="thicken" stdDeviation="3" result="blurred" />
+                        
+                                <!-- Change the colour -->
+                                <feFlood flood-color="rgba(250, 237, 39, 0.5)" result="glowColor" />
+                        
+                                <!-- Color in the glows -->
+                                <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+                        
+                                <!--	Layer the effects together -->
+                                <feMerge>
+                                    <feMergeNode in="softGlow_colored"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>                
+                        <rect x="25%" y="140" width="50%" height="20" fill="yellow" filter="url(#sofGlow)" />
+                    </svg>
+                
+                </div>
+                
+                <!-- Scroll Down Indicator -->
+                <div id="scroll-down-indicator" class="reset-anime animated fadeInUp">
+                    <a class="nav-link" href="#">
+                        <svg width="45" height="45" viewBox="0 0 166 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip-scroll)">
+                                <path d="M83 0C52.4885 0 27.6667 24.2137 27.6667 53.9738V108.029C27.6667 137.789 52.4885 162 83 162C113.511 162 138.333 137.789 138.333 108.029V53.9738C138.333 24.2137 113.511 0 83 0ZM132.185 108.029C132.185 134.481 110.121 156 83 156C55.8793 156 33.8147 134.481 33.8147 108.029V53.9738C33.8147 27.522 55.8793 5.99991 83 5.99991C110.121 5.99991 132.185 27.5212 132.185 53.9738V108.029Z" fill="white"/>
+                                <path d="M83 17.9997C81.3022 17.9997 79.9256 19.3417 79.9256 21.0001V48.1671C79.9256 49.8255 81.3022 51.1675 83 51.1675C84.6978 51.1675 86.0744 49.8255 86.0744 48.1671V21.0001C86.0736 19.3417 84.6978 17.9997 83 17.9997Z" fill="white"/>
+                                <path class="blink" d="M44 46C44 30.536 56.536 18 72 18V18V51H44V46Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip-scroll">
+                                    <rect width="166" height="162" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>                                
+                    </a>
+                    <span class="text-white">Scroll Down</span>
+                </div>
+            </section>
+
+            <!-- Section 2-->
+            <section class="section s2">
+                <div class="container">
+                    <span class="text-white h1">
+                        <p class="reset-anime animated fadeInUp">asd</p>
+                    </span>
+                </div>
+            </section>
+            <!-- Section 3-->
+            <section class="section s3">
+                    <div class="container">
+                        <span class="text-white h1">
+                            <p class="reset-anime animated fadeInUp">asd</p>
+                        </span>
+                    </div>
+                </section>
+        </div>
+
+        <!-- Footer -->
+        <nav class="footer navbar navbar-expand-md navbar-light bg-transparent position-fixed fixed-bottom">
+            <div class="container-fluid col-md-12">
+                
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto copyright animated fadeInUp">
+                    <li><span class="text-white">© 2019 Kz Sherwin.</span></li>
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto social-media animated fadeInUp">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Scrolling Animation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+        <!-- Full Page JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/vendors/easings.min.js" integrity="sha256-se1LVUgnBaGcZvC0A7xkl3Lea7CRU5BQqUQT8ZvdH4A=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
+        <!-- Scripts -->
+        <script src='js/custom.js'></script>
+        
+    </body>
+</html>
