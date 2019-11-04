@@ -1,0 +1,71 @@
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+	
+	/* Global */
+	.header {
+		margin-top: 0.5rem;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.menu{
+		width: 30px !important;
+	}
+
+	#fp-nav{
+		right: 0 !important;
+	}
+
+	.start-project-btn, .start-project-btn:hover {
+		padding: 7px 14px 7px 14px;
+		font-size: 14px;
+	}
+
+	.cross {
+		top: 1.2rem;
+		left: 1rem;
+		width: 23px;
+		height: 23px;
+	}
+
+	.nav-modal-content .nav-link {
+		font-size: 35px !important;
+		font-family: 500;
+	}
+	
+	.nav-modal-copyright {
+		position: absolute;
+		bottom: 1.2rem;
+		left: 1rem;
+		display: block;
+	}
+
+	.text-deco-box{
+		bottom: 1.2rem;
+	}
+
+	#scroll-down-indicator{
+		bottom: 4rem;
+	}
+
+	.footer {
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.copyright{
+		display: none;
+	}
+
+	.social-media {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		font-size: 1.2rem;
+	}
+
+	/* First Section */
+	.logo-container {
+		padding: 10px;
+	}
+}
