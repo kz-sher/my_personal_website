@@ -1,9 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     
+    // Check what language is being used
+    const cn = document.getElementById('lang-cn');
+    const en = document.getElementById('lang-en');
+    const styleElem = document.head.appendChild(document.createElement("style"));
+
+    if (document.documentElement.lang === 'en'){
+        en.style.backgroundColor = 'red';
+        en.style.color = 'white';
+        styleElem.innerHTML = "#lang-en::after {background-color: red;}";
+    }
+
     // Add full page controller
     new fullpage('#app', {
         navigation: true,
-        anchors: ['home', 'about_me', 'my_projects', 'work_experiences', 'job_interests'],
+        anchors: ['home', 'about_me', 'my_projects', 'work_experience', 'job_interests'],
         navigationTooltips: ['Home', 'About Me', 'My Projects', 'Work Experience', 'Job Interests'],
     });
 
@@ -70,6 +81,57 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // Enable scrolling
             fullpage_api.setAllowScrolling(true);
         });
+    });
+
+    // Adjust position of timeline dots
+    const timelineDots = document.querySelectorAll("#timeline .dot");
+    const timelineDates = document.querySelectorAll("#timeline date");
+    const timelineInside = document.querySelector("#timeline .inside");
+    const companyField = document.querySelector(".s4 .description .company-name");
+    const positionField = document.querySelector(".s4 .description .position");
+    const responsibilityField = document.querySelector(".s4 .description .responsibility");
+    const s4Description = document.querySelector(".s4 .description");
+
+    // Change CSS style for all odd number of dates
+    timelineDates.forEach(function(date, index){
+        if (index % 2 === 0){
+            date.style.top = "-30px";
+        }
+        else{
+            date.style.top = "30px";
+        }
+    });
+
+    timelineDots.forEach(function(dot, index){
+        dot.style.left = 100/(timelineDots.length + 1) * (index + 1) + "%";
+
+        // Update work experience content  when clicked
+        dot.addEventListener('click', function(){
+            const company = this.querySelector(".company-name");
+            const position = this.querySelector(".position");
+            const responsibility = this.querySelector(".responsibility");
+
+            // Reset CSS style for all dots
+            timelineDots.forEach(function(dot){
+                dot.style.backgroundColor = "white";
+                dot.style.border = "5px solid red";
+            });
+
+            // Update content
+            companyField.innerHTML = company.innerHTML;
+            positionField.innerHTML = position.innerHTML;
+            responsibilityField.innerHTML = responsibility.innerHTML;
+
+            // Update CSS style for that dot
+            this.style.backgroundColor = "red";
+            this.style.border = "5px solid white";
+            timelineInside.style.width = this.style.left;
+            
+        });
+
+        if (index === 0) {
+            dot.click();
+        }
     });
 
     // Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas 
@@ -156,11 +218,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     function animateStarfield(){
-        ctx.beginPath();
-        ctx.fillStyle = "#141414";
-        ctx.globalCompositeOperation = "source-over";
-        ctx.fillRect(-w/2, -h/2, w, h);
-        ctx.closePath();        
+        // Store the current transformation matrix
+        ctx.save();
+
+        // Use the identity matrix while clearing the canvas
+        ctx.clearRect(-w/2, -h/2, w, h);
+
+        // Restore the transform
+        ctx.restore(); 
 
         for (i = 0 ;i < starNum; i++){
             var star = stars[i];

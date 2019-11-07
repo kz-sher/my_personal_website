@@ -1,4 +1,10 @@
 /* Global */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: 'Poppins';
 }
@@ -49,9 +55,10 @@ body {
 }
 
 .sub-container {
+	width: 60%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	width: 60%;
 	align-items: center;
 	justify-content: center;
 }
@@ -60,13 +67,60 @@ body {
 	animation-delay: 1.5s;
 }
 
+.language-switcher {
+	display: flex;
+	justify-content: space-around;
+}
+
+#lang-cn, #lang-en{
+	position: relative;
+	margin-left: 7px;
+	margin-right: 7px;
+	padding:5px 10px;
+	cursor: pointer;
+	background-color: white;
+	transition: 0.3s ease-in-out;
+}
+
+#lang-cn:hover, #lang-en:hover{
+	background: red;
+	color: white;
+}
+
+#lang-cn::after, #lang-en::after {
+	content: ' ';
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 100%;
+	top: 0;
+	z-index: -1;
+	background-color: white;
+	transition: 0.3s ease-in-out;
+}
+
+#lang-cn::after {
+	right: 0;
+	transform-origin: bottom left;
+	transform: skew(-15deg, 0deg);
+}
+
+#lang-en::after {
+	left: 0;
+	transform-origin: top left;
+	transform: skew(-15deg, 0deg);
+}
+
+#lang-cn:hover::after, #lang-en:hover::after{
+	background: red;
+}
+
 .start-project-btn{
 	padding: 10px 20px 10px 20px;
 	background-color: #ff0000;
 	color: white;
 	font-weight: 600;
 	box-shadow: 0 5px 50px rgba(255,0,0,0.5);
-	cursor: pointer;
 	border: 0;
 }
 
@@ -176,6 +230,7 @@ body {
 }
 
 .social-media i:hover{
+	transition: 0.3s;
 	transform: scale(1.5, 1.5);
 }
 
@@ -194,6 +249,7 @@ body {
 }
 
 .section .description{
+	position: relative;
 	font-size: 20px;
 	font-weight: 400;
 	color: white;
@@ -205,14 +261,34 @@ body {
 .section .info-support{
 	display: flex;
 	width: 100%;
+	height: 30%;
 }
 
-.section .info-support .info-card{
+.section .info-box{
+	width: 30%;
+	height: 200px;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 }
 
-/* First Section */
+.section .info-box-icon {
+	font-size: 5rem;
+	margin-bottom: 15px;
+}
+
+.section .info-box-title {
+	color: white;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+/* Home */
 .logo-container {
 	display: flex;
 	justify-content: center;
@@ -277,31 +353,224 @@ body {
 	animation: full-offset-animation 0.7s linear forwards, line-animation 8s linear 1.2s infinite;
 }
 
-/* Second Section */
-.s2 .info-card{
-	width: 20%;
-	text-align: center;
+/* About Me */
+.s2 .info-box {
+	border: 3px solid red;
+	border-radius: 10%;
+	box-shadow: 0 5px 10px rgba(255,0,0,0.5);
+	transition: 0.3s ease-out;
+	cursor: pointer;
 }
 
-.s2 .info-card:nth-child(3){
-	width: 40%;
+.s2 .info-box:hover {
+	background: red;
 }
 
-.s2 .info-card img{
-	width: 100%;
-}
-
-.s2 .info-card-title{
+.s2 .info-box-icon, .s2 .info-box-title {
 	color: white;
-	font-size: 14px;
-	margin-top: 10px;
 }
 
-.s2 .info-card:nth-child(3) svg{
-	width: 20%;
+/* My Projects */
+.s3 .description{
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+.s3 .project-row{
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.s3 .project {
+	width: 175px;
+	margin-left: 25px;
+	margin-right: 25px;
+	overflow: visible;
+	cursor: pointer;
+	position: relative;
+	transition: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.s3 .project:hover {
+	transform: scale(1.15);
+}
+
+.s3 .project-img {
+	box-shadow: 7px 7px 1px rgba(255,0,0,0.8);
+	transition: 0.3s;
+}
+
+.s3 .project:hover .project-img {
+	box-shadow: 0px 0px 1px rgba(255,0,0,0.8);
+}
+
+.s3 .project span {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	box-shadow: 13px 13px 1px rgba(255, 0, 0, 0.5);
+	transition: 0.3s;
+}
+
+.s3 .project:hover span {
+	box-shadow: 0px 0px 1px rgba(255,0,0,0.5);
+}
+
+.s3 .project-button {
+	width: 30%;
+	background-color: transparent;
+	border: 2px solid red;
+	padding: 10px 30px 10px 30px;
+	color: white;
+	font-weight: 600;
+	transition: 0.3s ease-in-out;
+}
+
+.s3 .project-button:hover{
+	padding: 10px 20px 10px 20px;
+	background-color: rgba(255,0,0,0.8);
+	color: rgba(255,255,255,0.9);
+	box-shadow: 0 5px 50px rgba(255,0,0,0.5);
+}
+
+/* Work Experience */
+.s4 .description {
+	height: 45%;
+	width: 100%;
+	border: 3px solid red;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.s4 .work-title {
+	width: 80%;
+	height: 25%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.s4 .description .company-name {
+	font-weight: 500;
+}
+
+.s4 .description .position {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.s4 .divider {
+	margin-top: 0;
+	background: red;
+	width: 80%;
+}
+
+.s4 .description .responsibility {
+	font-size: 16px;
+	width: 80%;
+}
+
+.s4 .description .responsibility ul{
+	padding-left: 20px;
+}
+
+#timeline {
+	background-color: red;
+	margin-top: 30px;
+	height: 10px;
+	width: 80%;
+	position: relative;
+	border-radius: 20px;
+}
+
+#timeline .inside {
+	position: absolute;
+	height: 4px;
+	background-color: #fff;
+	width: 0%;
+	top: 3px;
+	left: 0;
+	transition: 0.3s;
+}
+
+#timeline .dot {
+	z-index: 5;
+    transition : 0.3s ease-in-out;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    text-align: center;
+	cursor: pointer;
 	background: white;
-	border-radius: 100%;
-	padding: 5px;
+	transition: 0.3s ease-out;
+	border: 5px solid red;
+}
+
+#timeline .dot:hover{
+	transform: scale(1.2);
+}
+
+#timeline date {
+	color: white;
+	font-size: 0.8rem;
+	display: block;
+	position: relative;
+	width: 120px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Job Interests */
+.s5 .info-box {
+	border: 1px solid rgba(0,0,0,0.2);
+	background-color: #141414;
+}
+
+.s5 .info-box::before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background-color: white;
+	transform: skew(2deg, 2deg);
+	z-index: -1;
+	background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.s5 .info-box::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.05);
+}
+
+.s5 .info-num-text {
+	position: absolute;
+	top: 1px;
+	right: 5px;
+	font-size: 1rem;
+	color: rgba(255,255,255,0.05);
+}
+
+.s5 .info-box-icon {
+	color: rgba(255,255,255,0.9);
 }
 
 /* Animation */

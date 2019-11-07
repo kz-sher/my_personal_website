@@ -15,6 +15,15 @@
 		right: 0 !important;
 	}
 
+	.sub-container {
+		width: 90%;
+	}
+
+	#lang-cn, #lang-en{
+		font-size: 14px;
+		padding:5px 5px;
+	}
+
 	.start-project-btn, .start-project-btn:hover {
 		padding: 7px 14px 7px 14px;
 		font-size: 14px;
@@ -64,8 +73,97 @@
 		font-size: 1.2rem;
 	}
 
-	/* First Section */
+	.section .title{
+		font-size: 30px;
+	}
+
+	.section .description{
+		font-size: 14px;
+	}
+
+	.section .info-support{
+		height: 20%;
+	}
+
+	.section .info-box{
+		height: 110px;
+	}
+
+	.section .info-box-icon {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+
+	/* Home */
 	.logo-container {
 		padding: 10px;
+	}
+
+	/* About Me */
+	.s2 .info-box-title {
+		font-size: 10px;
+	}
+
+	/* My Projects */
+	.s3 .project-row{
+		width: 80%;
+		margin-bottom: 30px;
+	}
+
+	.s3 .project {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.s3 .project-button {
+		padding: 7px 14px 7px 14px;
+		font-size: 14px;
+		width: 40%;
+	}
+
+	.s3 .project-button:hover {
+		padding: 7px 14px 7px 14px;
+		font-size: 14px;
+		width: 40%;
+	}
+
+	/* Work Experience */
+	.s4 .description {
+		height: 35%;
+	}
+	
+	.s4 .description .company-name {
+		text-align: initial;
+		font-size: 14px;
+	}
+	
+	.s4 .description .position {
+		font-size: 10px;
+		font-weight: 300;
+	}
+
+	.s4 .description .responsibility {
+		font-size: 12px;
+	}
+
+	#timeline .dot {
+		width: 20px;
+		height: 20px;
+		top: -4px;
+		border: 2px solid red;
+	}
+	
+	#timeline date {
+		font-size: 10px;
+		text-align: left;
+	}
+
+	/* Job Interests */
+	.s5 .info-num-text {
+		font-size: 0.7rem;
+	}
+
+	.s5 .info-box-title {
+		font-size: 8px;
 	}
 }
