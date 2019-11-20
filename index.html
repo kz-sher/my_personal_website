@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +21,8 @@
         <!-- Custom -->
         <link href='css/style.css' rel="stylesheet">
         <link href='css/style-large-desk.css' rel="stylesheet">
-        <link href='css/style-pad.css' rel="stylesheet">
         <link href='css/style-mobile.css' rel="stylesheet">
+        <link href='css/style-pad.css' rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha256-/sdxenK1NDowSNuphgwjv8wSosSNZB0t5koXqd7XqOI=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" integrity="sha256-UZFVAO0Fn854ajzdWnJ2Oze6k1X4LNqE2RJPW3MBfq8=" crossorigin="anonymous" />
@@ -35,8 +35,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     </head>
     <body>
-        <canvas id="canvas"></canvas>
-        
+        <!-- <canvas id="canvas"></canvas> -->
+        <!-- lock screen demo -->
+
         <!-- Header -->
         <nav class="header navbar bg-transparent position-fixed fixed-top">
             <div class="container-fluid col-md-12">
@@ -47,7 +48,7 @@
                 </svg>
 
                 <div class="navbar-nav ml-auto animated fadeInUp">
-                    <div class="language-switcher">
+                    <div class="language-switcher" id="language-switcher">
                         <div id="lang-cn"><span class="flag-icon flag-icon-cn"></span> CN</div>
                         <div id="lang-en"><span class="flag-icon flag-icon-us"></span> EN</div>
                     </div>
@@ -65,33 +66,33 @@
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
                             <a class="nav-link nav-modal-close" href="#home">
-                                <span class="dot">. </span><span class="text">Home</span>
+                                <span class="dot">. </span><span class="trn text">Home</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-modal-close" href="#about_me">
-                                <span class="dot">. </span><span class="text">About Me</span>
+                                <span class="dot">. </span><span class="trn text">About Me</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-modal-close" href="#my_projects">
-                                <span class="dot">. </span><span class="text">My Projects</span>
+                                <span class="dot">. </span><span class="trn text">My Projects</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-modal-close" href="#work_experience">
-                                <span class="dot">. </span><span class="text">Work Experience</span>
+                                <span class="dot">. </span><span class="trn text">Work Experience</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-modal-close" href="#job_interests">
-                                <span class="dot">. </span><span class="text">Job Interests</span>
+                                <span class="dot">. </span><span class="trn text">Job Interests</span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="nav-modal-copyright">
-                    <span class="text-white">© 2019 Kz Sherwin.</span>
+                    <span class="trn text-white">© 2019 Kz Sherwin.</span>
                 </div>
                 <svg class="text-deco-box flicker" width="40" height="170" viewBox="0 0 40 170">
                     <defs>
@@ -126,7 +127,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h5 class="modal-title" id="education-modal-title">
-                    <span class="dot">.</span> Education
+                    <span class="dot">.</span> <span class="trn" data-trn-key="Education">Education<span>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="fas fa-times text-white"></i>
@@ -136,12 +137,12 @@
                     <ul class="nav nav-tabs" id="edu-tab" role="tablist">
                         <li class="nav-item tab">
                             <a class="nav-link active" id="degree-tab" data-toggle="tab" href="#degree" role="tab" aria-controls="degree" aria-selected="true">
-                                &nbsp; Degree
+                                &nbsp; <span class="trn">Degree</span>
                             </a>
                         </li>
                         <li class="nav-item tab">
                             <a class="nav-link" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="false">
-                                &nbsp; Courses
+                                &nbsp; <span class="trn">Courses</span>
                             </a>
                         </li>
                     </ul>
@@ -149,13 +150,13 @@
                         <div class="tab-pane fade show active" id="degree" role="tabpanel" aria-labelledby="degree-tab">
                             <div class="info-bar">
                                 <i class="fas fa-graduation-cap"></i>
-                                &nbsp; BCompSc, Monash University.
+                                &nbsp; <span class="trn">BCompSc, Monash University.</span>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="course" role="tabpanel" aria-labelledby="course-tab">
                             <div class="info-bar">
                                 <i class="fas fa-book"></i>
-                                &nbsp; NxForce 2018 - Asia Cybersecurity Exchange
+                                &nbsp; <span class="trn">NxForce 2018 - Asia Cybersecurity Exchange</span>
                             </div>
                         </div>
                     </div>
@@ -170,7 +171,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h5 class="modal-title" id="skillsets-modal-title">
-                    <span class="dot">.</span> Skillsets
+                    <span class="dot">.</span> <span class="trn">Skillsets</span>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="fas fa-times text-white"></i>
@@ -180,17 +181,17 @@
                     <ul class="nav nav-tabs" id="skill-tab" role="tablist">
                         <li class="nav-item tab">
                             <a class="nav-link active" id="prog-lang-tab" data-toggle="tab" href="#prog-lang" role="tab" aria-controls="prog-lang" aria-selected="true">
-                                &nbsp; Programming
+                                &nbsp; <span class="trn">Programming</span>
                             </a>
                         </li>
                         <li class="nav-item tab">
                             <a class="nav-link" id="framework-tab" data-toggle="tab" href="#framework" role="tab" aria-controls="framework" aria-selected="false">
-                                &nbsp; Frameworks
+                                &nbsp; <span class="trn">Frameworks</span>
                             </a>
                         </li>
                         <li class="nav-item tab">
                             <a class="nav-link" id="others-tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">
-                                &nbsp; Others
+                                &nbsp; <span class="trn">Others</span>
                             </a>
                         </li>
                     </ul>
@@ -281,7 +282,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h5 class="modal-title" id="awards-modal-title">
-                    <span class="dot">.</span> Awards
+                    <span class="dot">.</span> <span class="trn">Awards</span>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="fas fa-times text-white"></i>
@@ -291,12 +292,12 @@
                     <ul class="nav nav-tabs" id="edu-tab" role="tablist">
                         <li class="nav-item tab">
                             <a class="nav-link active" id="competitions-tab" data-toggle="tab" href="#competitions" role="tab" aria-controls="competitions" aria-selected="true">
-                                &nbsp; Competitions
+                                &nbsp; <span class="trn">Competitions</span>
                             </a>
                         </li>
                         <li class="nav-item tab">
                             <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">
-                                &nbsp; Professional
+                                &nbsp; <span class="trn">Professional</span>
                             </a>
                         </li>
                     </ul>
@@ -304,13 +305,13 @@
                         <div class="tab-pane fade show active" id="competitions" role="tabpanel" aria-labelledby="competitions-tab">
                             <div class="info-bar">
                                 <i class="fas fa-book"></i>
-                                &nbsp; Monash - Petrosains Gerontechnology Challenge 2018 (1st Place)
+                                &nbsp; <span class="trn">Monash - Petrosains Gerontechnology Challenge 2018 (1st Place)</span>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="professional" role="tabpanel" aria-labelledby="professional-tab">
                             <div class="info-bar">
                                 <i class="fas fa-certificate"></i>
-                                &nbsp; ISACA - Cybersecurity Fundamentals Certificate
+                                &nbsp; <span class="trn">ISACA - Cybersecurity Fundamentals Certificate</span>
                             </div>
                         </div>
                     </div>
@@ -361,7 +362,7 @@
                             </clipPath>
                         </defs>
                     </svg>                                
-                    <span class="text-white mt-1">Scroll Down</span>
+                    <span class="trn text-white mt-1">Scroll Down</span>
                 </div>
             </section>
 
@@ -372,23 +373,28 @@
 
                         <div class="title">
                             <span class="dot">.</span>
-                            <span class="text">About Me</span>
+                            <span class="trn text">About Me</span>
                         </div>
                         <div class="description">
-                            Hi there, I'm KZ Sherwin. People normally call me "Kay-Zee", which is my initial. I'm a software developer from Malaysia. The reason why I choose this as my career might involve with quite a lot of stuffs but the fun fact is that I'm passionate about coding. For more information about my background, check it out below:
+                            <p>
+                                <span class="trn">Hi there, I'm KZ Sherwin. People normally call me 'Kay-Zee', which is my initial.</span>
+                                <span class="trn">I'm a software developer from Malaysia.</span>
+                                <span class="trn">The reason why I choose this as my career might involve with quite a lot of stuffs but the fun fact is that I'm passionate about coding.</span>
+                                <span class="trn">For more information about my background, check it out below:</span>
+                            </p>
                         </div>
                         <div class="info-support">
                             <div class="info-box" data-toggle="modal" data-target="#education-modal">
                                 <i class="info-box-icon fas fa-school"></i>
-                                <span class="info-box-title">Education</span>
+                                <span class="trn info-box-title">Education</span>
                             </div>
                             <div class="info-box" data-toggle="modal" data-target="#skillsets-modal">
                                 <i class="info-box-icon fas fa-address-card"></i>
-                                <span class="info-box-title">Skillsets</span>
+                                <span class="trn info-box-title">Skillsets</span>
                             </div>
                             <div class="info-box" data-toggle="modal" data-target="#awards-modal">
                                 <i class="info-box-icon fas fa-award"></i>
-                                <span class="info-box-title">Awards</span>
+                                <span class="trn info-box-title">Awards</span>
                             </div>
                         </div>
                     </div>
@@ -401,7 +407,7 @@
                     <div class="sub-container">
                         <div class="title">
                             <span class="dot">.</span>
-                            <span class="text">My Projects</span>
+                            <span class="trn text">My Projects</span>
                         </div>
                         <div class="description">
                             <div class="project-row">
@@ -425,7 +431,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="project-button">View More</button>
+                        <button class="trn project-button">View More</button>
                     </div>
                 </div>
             </section>
@@ -436,45 +442,46 @@
                     <div class="sub-container">
                         <div class="title">
                             <span class="dot">.</span>
-                            <span class="text">Work Experience</span>
+                            <span class="trn text">Work Experience</span>
                         </div>
                         <div class="description">
                             <div class="work-title">
                                 <div class="company-name"></div>
-                                <div class="position"></div>
+                                <div class="trn position"></div>
                             </div>
                             <hr class="divider">
                             <div class="responsibility"></div>
                         </div>
                         <div id="timeline">
                             <div class="dot" id="one">
-                                <date>Nov'17 - Jan'18</date>
+                                <date class="trn">Nov'17 - Jan'18</date>
                                 <div class="company-name sr-only">BFM Group Sdn Bhd</div>
-                                <div class="position sr-only">Trainee - Web Developer & E-commerce</div>
+                                <!-- <div class="trn position sr-only">PASS Maths Tutor</div> -->
+                                <div class="trn position sr-only">Trainee - Web Developer &amp; E-commerce</div>
                                 <div class="responsibility sr-only">
                                     <ul>                                    
-                                        <li>Designing a simple and clean website</li>
-                                        <li>Assisting on product delivery</li>
-                                        <li>Learning new knowledge about social media advertising and providing related services for the company</li>
+                                        <li class="trn">Designing a simple and clean website</li>
+                                        <li class="trn">Assisting on product delivery</li>
+                                        <li class="trn">Learning new knowledge about social media advertising and providing related services for the company</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="dot" id="two">
-                                <date>Jul'18 - Nov'18</date>
+                                <date class="trn">Jul'18 - Nov'18</date>
                                 <div class="company-name sr-only">Monash University Malaysia</div>
-                                <div class="position sr-only">PASS Maths Tutor</div>
+                                <div class="trn position sr-only">PASS Maths Tutor</div>
                                 <div class="responsibility sr-only"></div>
                             </div>
                             <div class="dot" id="three">
-                                <date>Dec'18 - Feb'19</date>
+                                <date class="trn">Dec'18 - Feb'19</date>
                                 <div class="company-name sr-only">ERNST & YOUNG ADVISORY SERVICES SDN BHD</div>
-                                <div class="position sr-only">Vacation Trainee – Advisory – Cyber Security</div>
+                                <div class="trn position sr-only">Vacation Trainee – Advisory – Cyber Security</div>
                                 <div class="responsibility sr-only"></div>
                             </div>
                             <div class="dot" id="four">
-                                <date>Jul'19 - Nov'19</date>
+                                <date class="trn">Jul'19 - Nov'19</date>
                                 <div class="company-name sr-only">After 90 Network Sdn Bhd</div>
-                                <div class="position sr-only">Web Developer</div>
+                                <div class="trn position sr-only">Web Developer</div>
                                 <div class="responsibility sr-only"></div>
                             </div>
                             <div class="inside"></div>
@@ -489,29 +496,33 @@
                             <div class="sub-container">
                                 <div class="title">
                                     <span class="dot">.</span>
-                                    <span class="text">Job Interests</span>
+                                    <span class="trn text">Job Interests</span>
                                 </div>
                                 <div class="description">
-                                    Have you ever had a thought of having something that can automate some specific tasks and format outputs into your desired presentation? Here comes to what you need: a fully customized web app/system. For more details, send me an enquiry to <a href="mailto:kzsherdev@gmail.com">my email</a>.
+                                    <p>
+                                        <span class="trn">Have you ever had a thought of having something that can automate some specific tasks and format outputs into your desired presentation?</span>
+                                        <span class="trn">Here comes to what you need: a fully customized web app/system.</span>
+                                        <span class="trn">For more details, send me an enquiry to </span><a href="mailto:kzsherdev@gmail.com" class="trn">my email</a><span clas="trn">.</span>
+                                    </p>
                                 </div>
                                 <div class="info-support">
                                     <div class="info-box">
                                         <span class="info-num-text">01</span>
                                         <i class="info-box-icon fas fa-shapes"></i>
-                                        <span class="info-box-title">Fully Customized</span>
-                                        <span class="info-box-title">Web App/System</span>
+                                        <span class="trn info-box-title">Fully Customized</span>
+                                        <span class="trn info-box-title">Web App/System</span>
                                     </div>
                                     <div class="info-box">
                                         <span class="info-num-text">02</span>
                                         <i class="info-box-icon fas fa-tools"></i>
-                                        <span class="info-box-title">Free 1-Year</span>
-                                        <span class="info-box-title">Maintenance</span>
+                                        <span class="trn info-box-title">Free 1-Year</span>
+                                        <span class="trn info-box-title">Maintenance</span>
                                     </div>
                                     <div class="info-box">
                                         <span class="info-num-text">03</span>
                                         <i class="info-box-icon fas fa-hand-holding-usd"></i>
-                                        <span class="info-box-title">High Quality</span>
-                                        <span class="info-box-title">Reasonable Price</span>
+                                        <span class="trn info-box-title">High Quality</span>
+                                        <span class="trn info-box-title">Reasonable Price</span>
                                     </div>
                                 </div>
                             </div>
@@ -525,23 +536,23 @@
                 
                 <!-- Left Side Of Navbar -->
                 <ul class="copyright navbar-nav mr-auto animated fadeInUp">
-                    <li><span class="text-white">© 2019 Kz Sherwin.</span></li>
+                    <li><span class="trn text-white">© 2019 Kz Sherwin.</span></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="social-media navbar-nav ml-auto animated fadeInUp">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="https://www.facebook.com/ho.kongzheng">
                             <i class="fab fa-facebook"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="http://instagram.com/kz_sher/">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="https://api.whatsapp.com/send?phone=60177656066&text=Enquiry%20from%20kzsher.com">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </li>
@@ -551,12 +562,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="https://github.com/kz-sher">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="mailto:kzsherdev@gmail.com">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </li>
@@ -566,6 +577,7 @@
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/jquery.translate.js"></script>
         <!-- GSAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
         <!-- Full Page JS -->
@@ -573,6 +585,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script src='js/main.js'></script>
+        <script src='js/translate.js'></script>
         <!-- Bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

@@ -7,10 +7,6 @@
 
 html, body {
 	font-family: 'Poppins';
-}
-
-#canvas {
-	position: fixed;
 	background-color: #141414;
 }
 

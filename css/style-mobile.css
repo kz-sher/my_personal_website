@@ -1,4 +1,4 @@
-@media screen and (max-device-width: 480px) and (orientation: portrait){
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	
 	/* Global */
 	.header {
@@ -29,11 +29,6 @@
 		left: 1rem;
 		width: 23px;
 		height: 23px;
-	}
-
-	.nav-modal-content .nav-link {
-		font-size: 35px !important;
-		font-family: 500;
 	}
 	
 	.nav-modal-copyright {
@@ -114,33 +109,10 @@
 		font-size: 14px;
 	}
 
-	.modal-body .info-bar{
-		padding: 5px;
-		width: 100%;
-		text-align: center;
-	}
-
 	/* My Projects */
-	.s3 .project-row{
-		width: 80%;
-		margin-bottom: 30px;
-	}
-
 	.s3 .project {
 		margin-left: 15px;
 		margin-right: 15px;
-	}
-
-	.s3 .project-button {
-		padding: 7px 14px 7px 14px;
-		font-size: 14px;
-		width: 40%;
-	}
-
-	.s3 .project-button:hover {
-		padding: 7px 14px 7px 14px;
-		font-size: 14px;
-		width: 40%;
 	}
 
 	/* Work Experience */
@@ -187,5 +159,93 @@
 
 	.s5 .info-box-title {
 		font-size: 8px;
+	}
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape){
+
+	/* Global */
+	.nav-modal-content .nav-link {
+		font-size: 25px;
+	}
+
+	#scroll-down-indicator{
+		display: none;	
+	}
+
+	.section .title{
+		margin-bottom: 5px;
+	}
+
+	.section .description{
+		margin-bottom: 10px;
+	}
+
+	/* My Projects */
+	.s3 .description{
+		margin-bottom: 0;
+	}
+	
+	.s3 .project-row{
+		width: 40%;
+		margin-bottom: 30px;
+	}
+
+	.s3 .project {
+		width: 70px;
+	}
+
+	.s3 .project-button {
+		padding: 5px 10px 5px 10px;
+		font-size: 10px;
+		width: 30%;
+	}
+
+	.s3 .project-button:hover {
+		padding: 5px 10px 5px 10px;
+		font-size: 14px;
+		width: 30%;
+	}
+
+	/* Work Experience */
+    .s4 .description {
+        height: 40%;
+	}
+	
+	#timeline {
+		margin-top: 30px;
+		margin-bottom: 35px;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait){
+	
+	.nav-modal-content .nav-link {
+		font-size: 35px !important;
+		font-family: 500;
+	}
+	
+	.modal-body .info-bar{
+		padding: 5px;
+		width: 100%;
+		text-align: center;
+	}
+
+	/* My Projects */
+	.s3 .project-row{
+		width: 80%;
+		margin-bottom: 30px;
+	}
+
+	.s3 .project-button {
+		padding: 7px 14px 7px 14px;
+		font-size: 14px;
+		width: 40%;
+	}
+
+	.s3 .project-button:hover {
+		padding: 7px 14px 7px 14px;
+		font-size: 14px;
+		width: 40%;
 	}
 }

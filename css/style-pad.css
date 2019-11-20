@@ -1,33 +1,29 @@
-@media screen and (max-device-width: 991px) and (orientation: portrait){
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
     
     /* Global */
     .section .title{
-		font-size: 45px;
-	}
+		  font-size: 45px;
+	  }
 
-	.section .description{
-		font-size: 18px;
-    }
-    
-    .section .info-box{
-        height: 120px;
-		width: 120px;
+	  .section .description{
+		  font-size: 18px;
     }
 
     .section .info-box-icon {
-		font-size: 2.5rem;
-	}
+		  font-size: 2.5rem;
+	  }
 
     /* My Projects */
     .s3 .description{
         margin-bottom: 10px;
     }
+
     .s3 .project-row{
-		width: 90%;
+		   width: 90%;
     }
     
     .s3 .project-button {
-		width: 40%;
+		   width: 40%;
     }
     
     /* Work Experience */
@@ -35,7 +31,24 @@
         min-height: 35%;
     }
 
+    /* Job Interests */
     .s5 .info-box-title {
-		font-size: 10px;
-	}
+		    font-size: 10px;
+	  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){
+    /* Global */
+    .section .info-box{
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){
+  /* Global */
+  .section .info-box{
+      height: 160px;
+      width: 160px;
+  }
 }
