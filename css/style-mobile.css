@@ -24,11 +24,6 @@
 		padding:5px 5px;
 	}
 
-	.start-project-btn, .start-project-btn:hover {
-		padding: 7px 14px 7px 14px;
-		font-size: 14px;
-	}
-
 	.cross {
 		top: 1.2rem;
 		left: 1rem;
@@ -81,12 +76,11 @@
 		font-size: 14px;
 	}
 
-	.section .info-support{
-		height: 20%;
-	}
-
 	.section .info-box{
-		height: 110px;
+		height: 95px;
+		width: 95px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 
 	.section .info-box-icon {
@@ -100,8 +94,30 @@
 	}
 
 	/* About Me */
-	.s2 .info-box-title {
+	.modal-dialog {
+		max-width: 95%;
+	}
+
+	.modal-content {
+		height: 98%;
+	}
+
+	.s2 .info-box {
+		border: 2px solid red;
+	}
+
+	.s2 .info-box-title, .modal-body .tab .nav-link{
 		font-size: 10px;
+	}
+
+	.modal-body .tab-content{
+		font-size: 14px;
+	}
+
+	.modal-body .info-bar{
+		padding: 5px;
+		width: 100%;
+		text-align: center;
 	}
 
 	/* My Projects */
@@ -128,10 +144,6 @@
 	}
 
 	/* Work Experience */
-	.s4 .description {
-		height: 35%;
-	}
-	
 	.s4 .description .company-name {
 		text-align: initial;
 		font-size: 14px;
@@ -146,10 +158,20 @@
 		font-size: 12px;
 	}
 
+	#timeline {
+		margin-top: 0;
+		height: 6px;
+	}
+
+	#timeline .inside{
+		top: 2px;
+		height: 2px;
+	}
+
 	#timeline .dot {
-		width: 20px;
-		height: 20px;
-		top: -4px;
+		width: 23px;
+		height: 23px;
+		top: -8px;
 		border: 2px solid red;
 	}
 	

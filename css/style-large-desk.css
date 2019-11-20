@@ -1,0 +1,74 @@
+@media only screen and (min-device-width: 1500px){
+
+    /* Global */
+    #lang-cn, #lang-en{
+        padding: 10px 15px;
+        font-size: 18px;
+        margin-left: 9px;
+	    margin-right: 9px;
+    }
+
+    .nav-modal-content .nav-link {
+        font-size: 60px;
+    }
+
+    .text-deco-box{
+        width: 80px;
+    }
+
+    .footer{
+        font-size: 20px;
+    }
+
+    #scroll-down-indicator{
+        font-size: 20px;
+    }
+
+    .section .title{
+        font-size: 65px;
+    }
+
+    .section .description{
+        font-size: 23px;
+    }
+
+    .section .info-box-icon {
+        font-size: 5rem;
+    }
+    
+    .section .info-box-title {
+        font-size: 16px;
+    }
+
+    /* About Me */
+    .modal-header .modal-title, .modal-header i {
+        font-size: 30px;
+    }
+
+    .modal-body .tab .nav-link{
+        font-size: 23px;
+    }
+
+    .modal-body .info-bar{
+        font-size: 25px;
+        padding: 12px 17px 12px 17px;
+    }
+
+    /* My Projects */
+    .s3 .project-button {
+        font-size: 20px;
+    }
+
+    /* Work Experience */
+    .s4 .description .position{
+        font-size: 16px;
+    }
+
+    .s4 .description .responsibility {
+        font-size: 18px;
+    }
+
+    #timeline date{
+        font-size: 1rem;
+    }
+}

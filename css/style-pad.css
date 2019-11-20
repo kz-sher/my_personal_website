@@ -1,0 +1,41 @@
+@media screen and (max-device-width: 991px) and (orientation: portrait){
+    
+    /* Global */
+    .section .title{
+		font-size: 45px;
+	}
+
+	.section .description{
+		font-size: 18px;
+    }
+    
+    .section .info-box{
+        height: 120px;
+		width: 120px;
+    }
+
+    .section .info-box-icon {
+		font-size: 2.5rem;
+	}
+
+    /* My Projects */
+    .s3 .description{
+        margin-bottom: 10px;
+    }
+    .s3 .project-row{
+		width: 90%;
+    }
+    
+    .s3 .project-button {
+		width: 40%;
+    }
+    
+    /* Work Experience */
+    .s4 .description {
+        min-height: 35%;
+    }
+
+    .s5 .info-box-title {
+		font-size: 10px;
+	}
+}

@@ -6,36 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>KZSH</title>
+        
+        <!-- !!!!!! -->
+        <!-- Styles -->
+        <!-- !!!!!! -->
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet"> -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
+        <!-- Full Page JS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" crossorigin="anonymous" />
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Custom -->
         <link href='css/style.css' rel="stylesheet">
+        <link href='css/style-large-desk.css' rel="stylesheet">
+        <link href='css/style-pad.css' rel="stylesheet">
         <link href='css/style-mobile.css' rel="stylesheet">
-
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha256-/sdxenK1NDowSNuphgwjv8wSosSNZB0t5koXqd7XqOI=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" integrity="sha256-UZFVAO0Fn854ajzdWnJ2Oze6k1X4LNqE2RJPW3MBfq8=" crossorigin="anonymous" />
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/regular.min.css" integrity="sha256-1xUFPzbRrl0qOLXDyBNYpuBMMThdiVPJEtZx24deLeg=" crossorigin="anonymous" /> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" integrity="sha256-8DcgqUGhWHHsTLj1qcGr0OuPbKkN1RwDjIbZ6DKh/RA=" crossorigin="anonymous" />
-
         <!-- Devicon 2.0 -->
-        <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
-
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <!-- Flag Icon -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css" integrity="sha256-NkXMfPcpoih3/xWDcrJcAX78pHpfwxkhNj0bAf8AMTs=" crossorigin="anonymous" />
-
         <!-- Animate CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
     </head>
     <body>
         <canvas id="canvas"></canvas>
@@ -50,7 +47,6 @@
                 </svg>
 
                 <div class="navbar-nav ml-auto animated fadeInUp">
-                    <!-- <button class="start-project-btn">Start Project</button> -->
                     <div class="language-switcher">
                         <div id="lang-cn"><span class="flag-icon flag-icon-cn"></span> CN</div>
                         <div id="lang-en"><span class="flag-icon flag-icon-us"></span> EN</div>
@@ -123,7 +119,206 @@
                 </svg>
             </div>
         </div>
+
+        <!-- Education Modal -->
+        <div class="modal fade" id="education-modal" tabindex="-1" role="dialog" aria-labelledby="education-modal-title" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="education-modal-title">
+                    <span class="dot">.</span> Education
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times text-white"></i>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="edu-tab" role="tablist">
+                        <li class="nav-item tab">
+                            <a class="nav-link active" id="degree-tab" data-toggle="tab" href="#degree" role="tab" aria-controls="degree" aria-selected="true">
+                                &nbsp; Degree
+                            </a>
+                        </li>
+                        <li class="nav-item tab">
+                            <a class="nav-link" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="false">
+                                &nbsp; Courses
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="edu-tab-content">
+                        <div class="tab-pane fade show active" id="degree" role="tabpanel" aria-labelledby="degree-tab">
+                            <div class="info-bar">
+                                <i class="fas fa-graduation-cap"></i>
+                                &nbsp; BCompSc, Monash University.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="course" role="tabpanel" aria-labelledby="course-tab">
+                            <div class="info-bar">
+                                <i class="fas fa-book"></i>
+                                &nbsp; NxForce 2018 - Asia Cybersecurity Exchange
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Skillsets Modal -->
+        <div class="modal fade" id="skillsets-modal" tabindex="-1" role="dialog" aria-labelledby="skillsets-modal-title" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="skillsets-modal-title">
+                    <span class="dot">.</span> Skillsets
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times text-white"></i>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="skill-tab" role="tablist">
+                        <li class="nav-item tab">
+                            <a class="nav-link active" id="prog-lang-tab" data-toggle="tab" href="#prog-lang" role="tab" aria-controls="prog-lang" aria-selected="true">
+                                &nbsp; Programming
+                            </a>
+                        </li>
+                        <li class="nav-item tab">
+                            <a class="nav-link" id="framework-tab" data-toggle="tab" href="#framework" role="tab" aria-controls="framework" aria-selected="false">
+                                &nbsp; Frameworks
+                            </a>
+                        </li>
+                        <li class="nav-item tab">
+                            <a class="nav-link" id="others-tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">
+                                &nbsp; Others
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="skill-tab-content">
+                        <div class="tab-pane fade show active" id="prog-lang" role="tabpanel" aria-labelledby="prog-lang-tab">
+                            <div class="info-bar">
+                                <i class="devicon-html5-plain"></i>
+                                &nbsp; HTML5
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-css3-plain"></i>
+                                &nbsp; CSS
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-javascript-plain"></i>
+                                &nbsp; JavaScript
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-jquery-plain"></i>
+                                &nbsp; jQuery
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-php-plain"></i> 
+                                &nbsp; PHP
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-python-plain"></i>
+                                &nbsp; Python
+                            </div>
+                            <div class="info-bar">
+                                <i class="fas fa-database"></i>
+                                &nbsp; SQL
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-java-plain"></i>
+                                &nbsp; Java
+                            </div>
+                            <div class="info-bar">
+                                <i class="fab fa-r-project"></i>
+                                &nbsp; R
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="framework" role="tabpanel" aria-labelledby="framework-tab">
+                            <div class="info-bar">
+                                <i class="devicon-nodejs-plain"></i>
+                                &nbsp; NodeJS
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-vuejs-plain"></i>
+                                &nbsp; VueJS
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-react-plain"></i>
+                                &nbsp; React
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-laravel-plain"></i>
+                                &nbsp; Laravel
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="others-tab">
+                            <div class="info-bar">
+                                <i class="devicon-mysql-plain"></i>
+                                &nbsp; MySQL
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-git-plain"></i>
+                                &nbsp; Git
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-wordpress-plain"></i>
+                                &nbsp; Wordpress
+                            </div>
+                            <div class="info-bar">
+                                <i class="devicon-linux-plain"></i>
+                                &nbsp; Linux
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
         
+        <!-- Awards Modal -->
+        <div class="modal fade" id="awards-modal" tabindex="-1" role="dialog" aria-labelledby="awards-modal-title" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="awards-modal-title">
+                    <span class="dot">.</span> Awards
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times text-white"></i>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="edu-tab" role="tablist">
+                        <li class="nav-item tab">
+                            <a class="nav-link active" id="competitions-tab" data-toggle="tab" href="#competitions" role="tab" aria-controls="competitions" aria-selected="true">
+                                &nbsp; Competitions
+                            </a>
+                        </li>
+                        <li class="nav-item tab">
+                            <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">
+                                &nbsp; Professional
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="edu-tab-content">
+                        <div class="tab-pane fade show active" id="competitions" role="tabpanel" aria-labelledby="competitions-tab">
+                            <div class="info-bar">
+                                <i class="fas fa-book"></i>
+                                &nbsp; Monash - Petrosains Gerontechnology Challenge 2018 (1st Place)
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="professional" role="tabpanel" aria-labelledby="professional-tab">
+                            <div class="info-bar">
+                                <i class="fas fa-certificate"></i>
+                                &nbsp; ISACA - Cybersecurity Fundamentals Certificate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
         <!-- Content -->
         <div id="app">
 
@@ -131,7 +326,7 @@
             <section class="section s1">
                 <div class="container">                            
                     <!-- Logo Text -->
-                    <div class="logo-container col-md-6">
+                    <div class="logo-container col-lg-6 col-sm-8">
                         <span></span>
                         <span></span>
                         <svg class="logo-text text-k" width="117" height="150" viewBox="0 0 117 150" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,6 +369,7 @@
             <section class="section s2">
                 <div class="container">
                     <div class="sub-container">
+
                         <div class="title">
                             <span class="dot">.</span>
                             <span class="text">About Me</span>
@@ -182,15 +378,15 @@
                             Hi there, I'm KZ Sherwin. People normally call me "Kay-Zee", which is my initial. I'm a software developer from Malaysia. The reason why I choose this as my career might involve with quite a lot of stuffs but the fun fact is that I'm passionate about coding. For more information about my background, check it out below:
                         </div>
                         <div class="info-support">
-                            <div class="info-box">
+                            <div class="info-box" data-toggle="modal" data-target="#education-modal">
                                 <i class="info-box-icon fas fa-school"></i>
                                 <span class="info-box-title">Education</span>
                             </div>
-                            <div class="info-box">
+                            <div class="info-box" data-toggle="modal" data-target="#skillsets-modal">
                                 <i class="info-box-icon fas fa-address-card"></i>
                                 <span class="info-box-title">Skillsets</span>
                             </div>
-                            <div class="info-box">
+                            <div class="info-box" data-toggle="modal" data-target="#awards-modal">
                                 <i class="info-box-icon fas fa-award"></i>
                                 <span class="info-box-title">Awards</span>
                             </div>
@@ -293,7 +489,7 @@
                             <div class="sub-container">
                                 <div class="title">
                                     <span class="dot">.</span>
-                                    <span class="text">Job Interest</span>
+                                    <span class="text">Job Interests</span>
                                 </div>
                                 <div class="description">
                                     Have you ever had a thought of having something that can automate some specific tasks and format outputs into your desired presentation? Here comes to what you need: a fully customized web app/system. For more details, send me an enquiry to <a href="mailto:kzsherdev@gmail.com">my email</a>.
@@ -375,11 +571,10 @@
         <!-- Full Page JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/vendors/easings.min.js" integrity="sha256-se1LVUgnBaGcZvC0A7xkl3Lea7CRU5BQqUQT8ZvdH4A=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
-        <!-- Sketch JS -->
-        <!-- <script src='js/sketch.min.js'></script> -->
         <!-- Scripts -->
         <script src='js/main.js'></script>
-        
-        
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

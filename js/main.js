@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     
+    /**
+     * Global
+     */
     // Check what language is being used
     const cn = document.getElementById('lang-cn');
     const en = document.getElementById('lang-en');
@@ -83,6 +86,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     });
 
+    /**
+     * Section: About Me
+     */
+    
+
+    /**
+     * Section: Work Experience
+     */
     // Adjust position of timeline dots
     const timelineDots = document.querySelectorAll("#timeline .dot");
     const timelineDates = document.querySelectorAll("#timeline date");
@@ -134,7 +145,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
-    // Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas Canvas 
+    /**
+     * Canvas
+     */
+    // Add starfield background animation
     window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
     var canvas = document.getElementById("canvas");
     var w = canvas.width = window.innerWidth;
