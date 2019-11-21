@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // Disable scrolling when modal box is open
-    $('.modal').on('shown.bs.modal', function(){
+    $('.modal-open-button').on('click', function(){
         fullpage_api.setAllowScrolling(false);
     })
     
@@ -10,6 +10,7 @@ $(document).ready(function(){
         fullpage_api.setAllowScrolling(true);
     });
 
+    // Change project modal box title and button url
     $('.project').on('click', function(){
         $('#projects-modal-label').html('<span class="dot">.</span> ' + $(this).find('.project-title').html());
         $('#demo-web-button').attr('href', $(this).find('.demo-web-url').html());
