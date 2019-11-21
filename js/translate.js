@@ -84,6 +84,37 @@ $(document).ready(function(){
         "ISACA - Cybersecurity Fundamentals Certificate": {
             cn: "ISACA - 网络安全初级证书"
         },
+        project1_img: {
+            cn: `<img class="project-img embed-responsive-item" src="images/cps_project_cover_cn.png" />`,
+            en: `<img class="project-img embed-responsive-item" src="images/cps_project_cover.png" />`
+        },
+        project2_img: {
+            cn: `<img class="project-img embed-responsive-item" src="images/tictactoe_project_cover_cn.png" />`,
+            en: `<img class="project-img embed-responsive-item" src="images/tictactoe_project_cover.png" />`
+        },
+        project3_img: {
+            cn: `<img class="project-img embed-responsive-item" src="images/obj_detect_project_cover_cn.png" />`,
+            en: `<img class="project-img embed-responsive-item" src="images/obj_detect_project_cover.png" />`
+        },
+        project4_img: {
+            cn: `<img class="project-img embed-responsive-item" src="images/black_with_white_border.png" />`,
+            en: `<img class="project-img embed-responsive-item" src="images/cps_project_cover.png" />`
+        },
+        "CPS": {
+            cn: "库存管理"
+        },
+        "Tic Tac Toe": {
+            cn: "井字游戏"
+        },
+        "Object Detection": {
+            cn: "物体检测"
+        },
+        "Demo Website": {
+            cn: "示范网站"
+        },
+        "View GitHub": {
+            cn: "查看GitHub"
+        },
         "View More": {
             cn: "查看更多"
         },

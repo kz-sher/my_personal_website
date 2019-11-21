@@ -326,6 +326,30 @@
             </div>
         </div>
 
+        <!-- Projects Modal -->
+        <div class="modal fade" id="projects-modal" tabindex="-1" role="dialog" aria-labelledby="projects-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="projects-modal-label">Project Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times text-white"></i>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <a class="btn" id="demo-web-button" target="_blank">
+                        <i class="fas fa-laptop-code"></i>
+                        &nbsp; <span class="trn">Demo Website</span>
+                    </a>
+                    <a class="btn" id="view-github-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        &nbsp; <span class="trn">View GitHub</span>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+
         <!-- Content -->
         <div id="app">
 
@@ -417,27 +441,39 @@
                         </div>
                         <div class="description">
                             <div class="project-row">
-                                <div class="project embed-responsive embed-responsive-1by1">
-                                    <a href="https://cps-management-kzsher-demo.herokuapp.com/" target="_blank"><img class="project-img embed-responsive-item" src="images/ig.png"></a>
+                                <div class="project embed-responsive embed-responsive-1by1" id="project1">
+                                    <a class="trn" data-toggle="modal" data-target="#projects-modal"  data-trn-key="project1_img"></a>
                                     <span></span>
+                                    <div class="trn project-title sr-only">CPS</div>
+                                    <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
+                                    <div class="github-url sr-only">https://github.com/kz-sher/cps_management</div>
                                 </div>
                                 <div class="project embed-responsive embed-responsive-1by1">
-                                    <img class="project-img embed-responsive-item" src="images/ig.png">
+                                    <a class="trn" data-toggle="modal" data-target="#projects-modal"  data-trn-key="project2_img"></a>
                                     <span></span>
+                                    <div class="trn project-title sr-only">Tic Tac Toe</div>
+                                    <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
+                                    <div class="github-url sr-only">https://github.com/kz-sher/tictacttoe</div>
                                 </div>
                             </div>
                             <div class="project-row">
                                 <div class="project embed-responsive embed-responsive-1by1">
-                                    <img class="project-img embed-responsive-item" src="images/ig.png">
+                                    <a class="trn" data-toggle="modal" data-target="#projects-modal"  data-trn-key="project3_img"></a>
                                     <span></span>
+                                    <div class="trn project-title sr-only">Object Detection</div>
+                                    <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
+                                    <div class="github-url sr-only">https://github.com/kz-sher/obj_detect_with_ibm_visual_recog</div>
                                 </div>
                                 <div class="project embed-responsive embed-responsive-1by1">
-                                    <img class="project-img embed-responsive-item" src="images/ig.png">
+                                    <a class="trn" data-toggle="modal" data-target="#projects-modal"  data-trn-key="project4_img"></a>
                                     <span></span>
+                                    <div class="trn project-title sr-only">Dunno Sia</div>
+                                    <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
+                                    <div class="github-url sr-only">https://github.com/kz-sher/idk</div>
                                 </div>
                             </div>
                         </div>
-                        <button class="trn project-button">View More</button>
+                        <button class="trn project-button" onclick="window.open('https://github.com/kz-sher');">View More</button>
                     </div>
                 </div>
             </section>
@@ -583,6 +619,7 @@
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Translate JS -->
         <script src="js/jquery.translate.js"></script>
         <!-- GSAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
@@ -591,6 +628,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script src='js/main.js'></script>
+        <script src='js/main2.js'></script>
         <script src='js/translate.js'></script>
         <!-- Bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
