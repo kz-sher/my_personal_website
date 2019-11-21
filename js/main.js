@@ -3,14 +3,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     /**
      * Global
      */
-    // Check what language is being used
-    
 
     // Add full page controller
     new fullpage('#app', {
         navigation: true,
         anchors: ['home', 'about_me', 'my_projects', 'work_experience', 'job_interests'],
         navigationTooltips: ['Home', 'About Me', 'My Projects', 'Work Experience', 'Job Interests'],
+        afterLoad: function(anchorLink, index) {
+            history.pushState(null, null, "index.html");
+        },
     });
 
     // Add fadeInUp animation to vertical scroll dots
