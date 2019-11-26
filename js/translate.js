@@ -121,23 +121,44 @@ $(document).ready(function(){
         "Trainee - Web Developer &amp; E-commerce": {
             cn: "培训生 - 网站开发师 & 电子商务"
         },
-        "Designing a simple and clean website": {
+        "Design a simple and clean website": {
             cn: "设计简约干净的网站"
         },
-        "Assisting on product delivery": {
+        "Assist on product delivery": {
             cn: "协助产品输送"
         },
-        "Learning new knowledge about social media advertising and providing related services for the company": {
+        "Learn new knowledge about social media advertising and providing related services for the company": {
             cn: "学习关于社交媒体广告的新知识及为公司提供相关服务"
         },
         "PASS Maths Tutor": {
             cn: "PASS 数学导师"
         },
+        "Provide guidance and/or learning tips to juniors": {
+            cn:"提供学弟妹指导及学习技巧"
+        },
+        "Assist them when they have difficulty towards teaching materials": {
+            cn: "协助他们解决教材上的疑问"
+        },
+        "Prepare weekly lessons and challenges": {
+            cn: "自备每周教学及一些小问题/挑战"
+        },
         "Vacation Trainee – Advisory – Cyber Security": {
             cn: "假期培训生 – 顾问 – 网络安全"
         },
+        "Conduct risk assessment against clients' system based on details provided by both client and government": {
+            cn: "根据客户方及政府方所提供的资料，对客户系统进行风险评估"
+        },
         "Web Developer": {
             cn: "网站开发师"
+        },
+        "Build simple landing webpage/e-commerce site using WordPress": {
+            cn: "利用WordPress建立简单的展示网页/电子商务网站"
+        },
+        "Follow up task progress and requirements with clients":{
+            cn: "与客户跟进任务进度及需求"
+        },
+        "Customize web apps using Laravel": {
+            cn: "利用Laravel定制网络应用"
         },
         "Nov'17 - Jan'18": {
             cn: "11月17年 - 1月18年"
