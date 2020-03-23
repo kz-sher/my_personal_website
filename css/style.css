@@ -415,6 +415,16 @@ html, body {
 }
 
 /* My Projects */
+.project-tag-group {
+	background: white;
+	border-radius: 10px;
+	padding: 5px 8px;
+	color: black;
+	font-weight: 500;
+	font-size: 0.8em;
+	text-align: center;
+}
+
 #projects-modal .modal-body{
 	display: flex;
 	justify-content: space-around;
@@ -432,6 +442,15 @@ html, body {
 
 #projects-modal .modal-body a:hover{
 	box-shadow: 0 5px 50px rgba(255,0,0,0.5);
+}
+
+#projects-modal .modal-footer {
+	border-top: 2px solid #8f8f8f;
+}
+
+#projects-modal .modal-footer {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .s3 .description{

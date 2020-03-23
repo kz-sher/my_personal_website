@@ -98,7 +98,7 @@ $(document).ready(function(){
         },
         project4_img: {
             cn: `<img class="project-img embed-responsive-item" src="images/black_with_white_border.png" alt="Single Page App - KZSH Demo" />`,
-            en: `<img class="project-img embed-responsive-item" src="images/cps_project_cover.png" alt="Single Page App - KZSH Demo" />`
+            en: `<img class="project-img embed-responsive-item" src="images/black_with_white_border.png" alt="Single Page App - KZSH Demo" />`
         },
         "CPS": {
             cn: "库存管理"
@@ -117,6 +117,12 @@ $(document).ready(function(){
         },
         "View More": {
             cn: "查看更多"
+        },
+        "Stock Management": {
+            cn: "货物管理"
+        },
+        "Multi-Player": {
+            cn: "多个玩家"
         },
         "Trainee - Web Developer &amp; E-commerce": {
             cn: "培训生 - 网站开发师 & 电子商务"

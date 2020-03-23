@@ -15,5 +15,6 @@ $(document).ready(function(){
         $('#projects-modal-label').html('<span class="dot">.</span> ' + $(this).find('.project-title').html());
         $('#demo-web-button').attr('href', $(this).find('.demo-web-url').html());
         $('#view-github-button').attr('href', $(this).find('.github-url').html());
+        $('#project-tags').html($(this).find('.project-tags').html());
     });
 });

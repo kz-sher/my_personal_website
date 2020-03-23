@@ -110,6 +110,11 @@
 	}
 
 	/* My Projects */
+	.project-tag-group {
+		width: 100%;
+		margin: 0 0 4px 0 !important;
+	}
+
 	#projects-modal .modal-content {
 		height: auto;
 	}

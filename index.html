@@ -31,6 +31,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Custom -->
+        <!-- <link href='css/style.css' rel="stylesheet"> -->
         <link href='css/style.css' rel="stylesheet">
         <link href='css/style-large-desk.css' rel="stylesheet">
         <link href='css/style-mobile.css' rel="stylesheet">
@@ -45,6 +46,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css" integrity="sha256-NkXMfPcpoih3/xWDcrJcAX78pHpfwxkhNj0bAf8AMTs=" crossorigin="anonymous" />
         <!-- Animate CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     </head>
     <body>
         <!-- <canvas id="canvas"></canvas> -->
@@ -74,6 +76,7 @@
                 <svg class="cross nav-modal-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve" width="32" height="32" class="">
                     <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88   c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242   C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879   s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
                 </svg>
+
                 <div class="nav-modal-content">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
@@ -347,6 +350,7 @@
                 </button>
                 </div>
                 <div class="modal-body">
+
                     <a class="btn" id="demo-web-button" target="_blank">
                         <i class="fas fa-laptop-code"></i>
                         &nbsp; <span class="trn">Demo Website</span>
@@ -355,6 +359,16 @@
                         <i class="fab fa-github"></i>
                         &nbsp; <span class="trn">View GitHub</span>
                     </a>
+                </div>
+                <div class="modal-footer" id="project-tags">
+                    <!-- <div class="project-tag-group">
+                        <i class="fas fa-tag"></i>
+                        <span>Tag</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-tag"></i>
+                        <span>Tag</span>
+                    </div> -->
                 </div>
             </div>
             </div>
@@ -457,6 +471,20 @@
                                     <div class="trn project-title sr-only">CPS</div>
                                     <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
                                     <div class="github-url sr-only">https://github.com/kz-sher/cps_management</div>
+                                    <div class="project-tags sr-only">
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span class="trn">Stock Management</span>
+                                        </div>
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>Laravel</span>
+                                        </div>
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>CRUD</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="project modal-open-button embed-responsive embed-responsive-1by1">
                                     <a class="trn" data-toggle="modal" data-target="#projects-modal"  data-trn-key="project2_img"></a>
@@ -464,6 +492,20 @@
                                     <div class="trn project-title sr-only">Tic Tac Toe</div>
                                     <div class="demo-web-url sr-only">https://tic-tac-toe-kzsher-demo.herokuapp.com/</div>
                                     <div class="github-url sr-only">https://github.com/kz-sher/tic_tac_toe</div>
+                                    <div class="project-tags sr-only">
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>NodeJS</span>
+                                        </div>
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>SocketIO</span>
+                                        </div>
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span class="trn">Multi-Player</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="project-row">
@@ -473,13 +515,33 @@
                                     <div class="trn project-title sr-only">Object Detection</div>
                                     <div class="demo-web-url sr-only">https://object-detection-kzsher-demo.netlify.com</div>
                                     <div class="github-url sr-only">https://github.com/kz-sher/object-detection</div>
+                                    <div class="project-tags sr-only">
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>ReactJS</span>
+                                        </div>
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>NodeJS</span>
+                                        </div>
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>IBM Watson API</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="project modal-open-button embed-responsive embed-responsive-1by1">
                                     <a class="trn" data-toggle="modal" data-target="#projects-modal"  data-trn-key="project4_img"></a>
                                     <span></span>
-                                    <div class="trn project-title sr-only">Dunno Sia</div>
+                                    <div class="trn project-title sr-only">NA</div>
                                     <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
                                     <div class="github-url sr-only">https://github.com/kz-sher/idk</div>
+                                    <div class="project-tags sr-only">
+                                        <div class="project-tag-group">
+                                            <i class="fas fa-tag"></i>
+                                            &nbsp;<span>Tag</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -511,7 +573,6 @@
                             <div class="dot" id="one">
                                 <date class="trn">Nov'17 - Jan'18</date>
                                 <div class="company-name sr-only">BFM Group Sdn Bhd</div>
-                                <!-- <div class="trn position sr-only">PASS Maths Tutor</div> -->
                                 <div class="trn position sr-only">Trainee - Web Developer &amp; E-commerce</div>
                                 <div class="responsibility sr-only">
                                     <ul>                                    
