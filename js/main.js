@@ -135,8 +135,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     /**
      * Canvas
+     * Description: Add starfield background animation
      */
-    // Add starfield background animation
     // window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
     // var canvas = document.getElementById("canvas");
     // var w = canvas.width = window.innerWidth;
