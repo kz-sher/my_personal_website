@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="This page consists of some mini projects that demonstrate my IT knowledge.">
+        <meta name="description" content="An image editor made to create my project cover">
         <meta name="keywords" content="kzsher, kzsherwin, kz sherwin, hokongzheng, ho kong zheng, kongzheng, kong zheng, kongzhengho, kong zheng ho">
         <meta name="author" content="Kz Sherwin | Ho Kong Zheng">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,7 @@
         <link href='css/style-large-desk.css' rel="stylesheet">
         <link href='css/style-mobile.css' rel="stylesheet">
         <link href='css/style-pad.css' rel="stylesheet">
-        <link href='css/project.css' rel="stylesheet">
+        <link href='css/project_cover_editor.css' rel="stylesheet">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha256-/sdxenK1NDowSNuphgwjv8wSosSNZB0t5koXqd7XqOI=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" integrity="sha256-UZFVAO0Fn854ajzdWnJ2Oze6k1X4LNqE2RJPW3MBfq8=" crossorigin="anonymous" />
@@ -50,9 +50,6 @@
 
     </head>
     <body>
-        <!-- <canvas id="canvas"></canvas> -->
-        <!-- lock screen demo -->
-
         <!-- Header -->
         <nav class="header navbar bg-transparent position-fixed fixed-top">
             <div class="container-fluid col-md-12">
@@ -68,33 +65,6 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Projects Modal -->
-        <div class="modal fade" id="projects-modal" tabindex="-1" role="dialog" aria-labelledby="projects-modal-label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="projects-modal-label">Project Title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="fas fa-times text-white"></i>
-                </button>
-                </div>
-                <div class="modal-body">
-
-                    <a class="btn" id="demo-web-button" target="_blank">
-                        <i class="fas fa-laptop-code"></i>
-                        &nbsp; <span class="trn">Demo Website</span>
-                    </a>
-                    <a class="btn" id="view-github-button" target="_blank">
-                        <i class="fab fa-github"></i>
-                        &nbsp; <span class="trn">View GitHub</span>
-                    </a>
-                </div>
-                <div class="modal-footer" id="project-tags">
-                </div>
-            </div>
-            </div>
-        </div>
 
         <!-- Content -->
         <div id="app">
@@ -125,97 +95,63 @@
                 </div>
             </section>
 
-            <!-- Project -->
-            <section class="section project-container">
-                <div class="title animated fadeInUp">
+            <!-- Project Cover Editor -->
+            <section class="section editor-container row col-md-8">
+                <div class="title animated fadeInUp col-md-12">
                     <span class="dot">.</span>
-                    <span class="trn text">My Projects</span>
+                    <span class="trn text">Project Cover Editor</span>
                 </div>
-                <div class="projects container col-md-10">
-                    <div class="project col-6 col-md-4 animated fadeInUp slow">
-                        <a class="trn " data-toggle="modal" data-target="#projects-modal"  data-trn-key="project1_img"></a>
-                        <span></span>
-                        <div class="trn project-title sr-only">CPS</div>
-                        <div class="demo-web-url sr-only">https://cps-management-kzsher-demo.herokuapp.com/</div>
-                        <div class="github-url sr-only">https://github.com/kz-sher/cps_management</div>
-                        <div class="project-tags sr-only">
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span class="trn">Stock Management</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>Laravel</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>CRUD</span>
-                            </div>
-                        </div>
+                <div class="d-flex justify-content-center col-md-12">
+                    <canvas id="ed_canvas" class="canvas"></canvas>
+                </div>
+                <div class="button_area container col-md-12">
+                    <div class="col-md-12 justify-content-center d-flex">
+                        <input type="file" id="upload_file" class="upload_file" />
+                        <button id="upload_btn" class="trn">Upload Image</button>
+                        <button id="clear_btn" class="trn">Clear</button>
+                        <button id="img_up">
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <button id="img_down">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <button id="img_left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="img_right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <div class="project col-6 col-md-4 animated fadeInUp slow">
-                        <a class="trn project " data-toggle="modal" data-target="#projects-modal"  data-trn-key="project2_img"></a>
-                        <div class="trn project-title sr-only">Tic Tac Toe</div>
-                            <div class="demo-web-url sr-only">https://tic-tac-toe-kzsher-demo.herokuapp.com/</div>
-                            <div class="github-url sr-only">https://github.com/kz-sher/tic_tac_toe</div>
-                            <div class="project-tags sr-only">
-                                <div class="project-tag-group">
-                                    <i class="fas fa-tag"></i>
-                                    &nbsp;<span>NodeJS</span>
-                                </div>
-                                <div class="project-tag-group">
-                                    <i class="fas fa-tag"></i>
-                                    &nbsp;<span>SocketIO</span>
-                                </div>
-                                <div class="project-tag-group">
-                                    <i class="fas fa-tag"></i>
-                                    &nbsp;<span class="trn">Multi-Player</span>
-                                </div>
-                            </div>
+                    <div class="col-md-12 justify-content-center d-flex">
+                        <input type="text" id="text" class="trn text" placeholder="@" size="14"/>
+                        <button id="enter" class="trn" >Enter</button>
+                        <button id="txt_up">
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <button id="txt_down">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <button id="txt_left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="txt_right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <div class="project col-6 col-md-4 animated fadeInUp slow">
-                        <a class="trn project " data-toggle="modal" data-target="#projects-modal"  data-trn-key="project3_img"></a>
-                        <div class="trn project-title sr-only">Object Detection</div>
-                        <div class="demo-web-url sr-only">https://object-detection-kzsher-demo.herokuapp.com</div>
-                        <div class="github-url sr-only">https://github.com/kz-sher/object_detection</div>
-                        <div class="project-tags sr-only">
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>ReactJS</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>NodeJS</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>IBM Watson API</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project col-6 col-md-4 animated fadeInUp slow">
-                        <a class="trn project " data-toggle="modal" data-target="#projects-modal"  data-trn-key="project4_img"></a>
-                        <div class="trn project-title sr-only">Ez Social</div>
-                        <div class="demo-web-url sr-only">https://ez-social-kzsher-demo.herokuapp.com/</div>
-                        <div class="github-url sr-only">https://github.com/kz-sher/ez_social</div>
-                        <div class="project-tags sr-only">
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span class="trn">AJAX</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span class="trn">OAuth</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>JWT</span>
-                            </div>
-                            <div class="project-tag-group">
-                                <i class="fas fa-tag"></i>
-                                &nbsp;<span>Redux</span>
-                            </div>
-                        </div>
+                    <div class="col-md-12 justify-content-center d-flex">
+                        <input type="text" id="move_size" class="move_size" placeholder="#" size="4"/>
+                        <button id="expand">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </button>
+                        <button id="compress">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                        </button>
+                        <button id="save" class="trn" >Save</button>
+                        <select id="attObj">
+                            <option value="img" class="trn" selected>Image</option>
+                            <option value="txt" class="trn">Text</option>
+                        </select>
+                        <a href="" id="img_placeholder" download="kzsh_project_cover"></a>
                     </div>
                 </div>
             </section>
@@ -278,8 +214,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/vendors/easings.min.js" integrity="sha256-se1LVUgnBaGcZvC0A7xkl3Lea7CRU5BQqUQT8ZvdH4A=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
         <!-- Scripts -->
-        <script src='js/main2.js'></script>
-        <script src='js/project.js'></script>
+        <script src='js/project_cover_editor.js'></script>
         <script src='js/translate.js'></script>
         <!-- Bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

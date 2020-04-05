@@ -228,6 +228,30 @@ $(document).ready(function(){
         },
         "Reasonable Price": {
             cn: "合理价格"
+        },
+        "Project Cover Editor": {
+            cn: "项目封面编辑器"
+        },
+        "Save":{
+            cn: "保存"
+        },
+        "Enter":{
+            cn: "输入"
+        },
+        "Clear":{
+            cn: "清除"
+        },
+        "Save":{
+            cn: "保存"
+        },
+        "Upload Image":{
+            cn: "上传照片"
+        },
+        "Image":{
+            cn: "照片"
+        },
+        "Text":{
+            cn: "字体"
         }
     }
 
