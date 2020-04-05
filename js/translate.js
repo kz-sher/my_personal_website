@@ -81,6 +81,18 @@ $(document).ready(function(){
         "Monash - Petrosains Gerontechnology Challenge 2018 (1st Place)": {
             cn: "莫纳什 - 馬來西亞國家石油科学馆年长科技竞赛2018（冠军）"
         },
+        "Monash High Achiever Award": {
+            cn: "莫纳什杰出成就奖"
+        },
+        "F-Secure Inter-Varsity Cyber Security Competition 2019 Semifinalist": {
+            cn: "F-Secure网络安全校际竞争2019（半决赛）"
+        },
+        "Inti College Unicode Competition^": {
+            cn: "英迪学院大学代码竞赛^"
+        },
+        "Facebook CTF 2019^": {
+            cn: "面子书网络安全夺旗战^"
+        },
         "ISACA - Cybersecurity Fundamentals Certificate": {
             cn: "ISACA - 网络安全初级证书"
         },
@@ -97,8 +109,8 @@ $(document).ready(function(){
             en: `<img class="project-img embed-responsive-item" src="images/obj_detect_project_cover.png" alt="Object Detection - KZSH Demo" />`
         },
         project4_img: {
-            cn: `<img class="project-img embed-responsive-item" src="images/black_with_white_border.png" alt="Single Page App - KZSH Demo" />`,
-            en: `<img class="project-img embed-responsive-item" src="images/black_with_white_border.png" alt="Single Page App - KZSH Demo" />`
+            cn: `<img class="project-img embed-responsive-item" src="images/ez_social_project_cover_cn.png" alt="Ez Social - KZSH Demo" />`,
+            en: `<img class="project-img embed-responsive-item" src="images/ez_social_project_cover.png" alt="Ez Social - KZSH Demo" />`
         },
         "CPS": {
             cn: "库存管理"
@@ -108,6 +120,9 @@ $(document).ready(function(){
         },
         "Object Detection": {
             cn: "物体检测"
+        },
+        "Ez Social": {
+            cn: "易吉社交"
         },
         "Demo Website": {
             cn: "示范网站"
@@ -123,6 +138,9 @@ $(document).ready(function(){
         },
         "Multi-Player": {
             cn: "多个玩家"
+        },
+        "Other Experience": {
+            cn: "其他经验"
         },
         "Trainee - Web Developer &amp; E-commerce": {
             cn: "培训生 - 网站开发师 & 电子商务"

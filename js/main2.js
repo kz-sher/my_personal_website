@@ -2,12 +2,16 @@ $(document).ready(function(){
 
     // Disable scrolling when modal box is open
     $('.modal-open-button').on('click', function(){
-        fullpage_api.setAllowScrolling(false);
+        if(fullpage_api){
+            fullpage_api.setAllowScrolling(false);
+        }
     })
     
     // Enable scrolling when modal box is closed
     $('.modal').on('hidden.bs.modal', function(){
-        fullpage_api.setAllowScrolling(true);
+        if(fullpage_api){
+            fullpage_api.setAllowScrolling(true);
+        }
     });
 
     // Change project modal box title and button url
