@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // Function for resetting the environment
     function clear(fromRedraw){
         if(!fromRedraw){
-            imgArr = txtArr = [];
+            imgArr = [];
+            txtArr = [];
         }
         ctx.clearRect(0, 0, cw, ch);
         initBgImg();
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
         clear(true);
         setTimeout(()=>{
+            console.log(imgArr.length)
             if(imgArr.length > 0){
                 console.log(imgArr)
                 ctx.drawImage(imgArr[0].img, imgArr[0].x, imgArr[0].y, imgArr[0].w, imgArr[0].h)
@@ -73,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var uploadBtn = document.querySelector('#upload_btn');
     var uploadFile = document.querySelector('#upload_file');
 
-    uploadBtn.addEventListener('click', function(){
+    uploadBtn.addEventListener('click', function(e){
         uploadFile.click();
     });
 
@@ -99,14 +101,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     // Clear canvas when clear button is clicked
     var clearBtn = document.querySelector('#clear_btn');
-    clearBtn.addEventListener('click', function(){
+    clearBtn.addEventListener('click', function(e){
         clear(false);
+        console.log(imgArr, txtArr)
     })
 
     // Add text to canvas 
     var txtText = document.querySelector('#text');
     var enterBtn = document.querySelector('#enter');
-    enterBtn.addEventListener('click', function(){
+    enterBtn.addEventListener('click', function(e){
         var txt = txtText.value;
         ctx.fillText(txt, 100, 355);
         txtArr.push({
@@ -124,19 +127,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var imgRight = document.querySelector('#img_right');
     var imgMoveSize = document.querySelector('#move_size');
 
-    imgUp.addEventListener('click', function(){
+    imgUp.addEventListener('click', function(e){
         var moveSize = imgMoveSize.value ? imgMoveSize.value : 5
         redraw(imgArr, {x: 0, y: -moveSize, w: 0, h: 0}, null)
     });
-    imgDown.addEventListener('click', function(){
+    imgDown.addEventListener('click', function(e){
         var moveSize = imgMoveSize.value ? imgMoveSize.value : 5
         redraw(imgArr, {x: 0, y: moveSize, w: 0, h: 0}, null)
     });
-    imgLeft.addEventListener('click', function(){
+    imgLeft.addEventListener('click', function(e){
         var moveSize = imgMoveSize.value ? imgMoveSize.value : 5
         redraw(imgArr, {x: -moveSize, y: 0, w: 0, h: 0}, null)
     });
-    imgRight.addEventListener('click', function(){
+    imgRight.addEventListener('click', function(e){
         var moveSize = imgMoveSize.value ? imgMoveSize.value : 5
         redraw(imgArr, {x: moveSize, y: 0, w: 0, h: 0}, null)
     });
@@ -148,19 +151,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var txtRight = document.querySelector('#txt_right');
     var txtMoveSize = document.querySelector('#move_size');
 
-    txtUp.addEventListener('click', function(){
+    txtUp.addEventListener('click', function(e){
         var moveSize = txtMoveSize.value ? txtMoveSize.value : 5
         redraw(txtArr, {x: 0, y: -moveSize, w: 0, h: 0}, null)
     });
-    txtDown.addEventListener('click', function(){
+    txtDown.addEventListener('click', function(e){
         var moveSize = txtMoveSize.value ? txtMoveSize.value : 5
         redraw(txtArr, {x: 0, y: moveSize, w: 0, h: 0}, null)
     });
-    txtLeft.addEventListener('click', function(){
+    txtLeft.addEventListener('click', function(e){
         var moveSize = txtMoveSize.value ? txtMoveSize.value : 5
         redraw(txtArr, {x: -moveSize, y: 0, w: 0, h: 0}, null)
     });
-    txtRight.addEventListener('click', function(){
+    txtRight.addEventListener('click', function(e){
         var moveSize = txtMoveSize.value ? txtMoveSize.value : 5
         redraw(txtArr, {x: moveSize, y: 0, w: 0, h: 0}, null)
     });
