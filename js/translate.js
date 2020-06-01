@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     var styleElem = "<style>\
                         #lang-en::after {background-color: red;} \
                         #lang-en {background-color:red; color:white;}\
@@ -26,18 +26,18 @@ $(document).ready(function(){
         },
         "Scroll Down": {
             cn: "滑至下方"
-        },  
+        },
         "© 2019 Kz Sherwin.": {
             cn: "© 2019 何孔正。"
         },
         "Hi there, I'm KZ Sherwin. People normally call me 'Kay-Zee', which is my initial.": {
             cn: "你好，我是何孔正。朋友们通常叫我'KZ', 也就是我名字的缩写。"
         },
-        "I'm a software developer from Malaysia.": {
-            cn: "我是名来自马来西亚的软件开发师。"
+        "I'm a software engineer from Malaysia.": {
+            cn: "我是名来自马来西亚的软件工程师。"
         },
-        "The reason why I choose this as my career might involve with quite a lot of stuffs but the fun fact is that I'm passionate about coding.": {
-            cn: "为什么我会选择它为我的职业或许牵涉蛮多的因素，但有趣的事实是我非常热衷于编程。"
+        "The reason why I choose this as my career might involve with quite a lot of stuffs but the fun fact is that I'm really passionate about coding.": {
+            cn: "为什么我会选择它为我的职业或许牵涉蛮多的因素，但有趣的事实是我真的非常热衷于编程。"
         },
         "For more information about my background, check it out below:": {
             cn: "关于更多我背景的详情，请查阅下方："
@@ -158,7 +158,7 @@ $(document).ready(function(){
             cn: "PASS 数学导师"
         },
         "Provide guidance and/or learning tips to juniors": {
-            cn:"提供学弟妹指导及学习技巧"
+            cn: "提供学弟妹指导及学习技巧"
         },
         "Assist them when they have difficulty towards teaching materials": {
             cn: "协助他们解决教材上的疑问"
@@ -178,7 +178,7 @@ $(document).ready(function(){
         "Build simple landing webpage/e-commerce site using WordPress": {
             cn: "利用WordPress建立简单的展示网页/电子商务网站"
         },
-        "Follow up task progress and requirements with clients":{
+        "Follow up task progress and requirements with clients": {
             cn: "与客户跟进任务进度及需求"
         },
         "Customize web apps using Laravel": {
@@ -232,49 +232,49 @@ $(document).ready(function(){
         "Project Cover Editor": {
             cn: "项目封面编辑器"
         },
-        "Save":{
+        "Save": {
             cn: "保存"
         },
-        "Enter":{
+        "Enter": {
             cn: "输入"
         },
-        "Clear":{
+        "Clear": {
             cn: "清除"
         },
-        "Save":{
+        "Save": {
             cn: "保存"
         },
-        "Upload Image":{
+        "Upload Image": {
             cn: "上传照片"
         },
-        "Image":{
+        "Image": {
             cn: "照片"
         },
-        "Text":{
+        "Text": {
             cn: "字体"
         }
     }
 
-    var translator = $('body').translate({lang: "en", t: dict}); //use English
+    var translator = $('body').translate({ lang: "en", t: dict }); //use English
 
-    function resetLanguageButtonStyle(button){
+    function resetLanguageButtonStyle(button) {
         $('head style').remove();
     }
 
-    function updateLanguageButtonStyle(button, lang_code){
+    function updateLanguageButtonStyle(button, lang_code) {
         $('head').append('<style>\
             #lang-' + lang_code + '::after {background-color: red;}\
             #lang-' + lang_code + ' {background-color:red; color:white;}\
         </style>');
     }
 
-    $('#lang-cn').click(function(){
+    $('#lang-cn').click(function () {
         translator.lang("cn");
         resetLanguageButtonStyle($('#lang-en'));
         updateLanguageButtonStyle($(this), 'cn');
     });
 
-    $('#lang-en').click(function(){
+    $('#lang-en').click(function () {
         translator.lang("en");
         resetLanguageButtonStyle($('#lang-cn'));
         updateLanguageButtonStyle($(this), 'en');
