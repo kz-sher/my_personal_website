@@ -27,8 +27,8 @@ $(document).ready(function () {
         "Scroll Down": {
             cn: "滑至下方"
         },
-        "© 2019 Kz Sherwin.": {
-            cn: "© 2019 何孔正。"
+        "© 2020 Kz Sherwin.": {
+            cn: "© 2020 何孔正。"
         },
         "Hi there, I'm KZ Sherwin. People normally call me 'Kay-Zee', which is my initial.": {
             cn: "你好，我是何孔正。朋友们通常叫我'KZ', 也就是我名字的缩写。"
