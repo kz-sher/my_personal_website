@@ -33,11 +33,11 @@ $(document).ready(function () {
         "Hi there, I'm KZ Sherwin. People normally call me 'Kay-Zee', which is my initial.": {
             cn: "你好，我是何孔正。朋友们通常叫我'KZ', 也就是我名字的缩写。"
         },
-        "I'm a software engineer from Malaysia.": {
-            cn: "我是名来自马来西亚的软件工程师。"
+        "I'm currently working as a software engineer at Shopee Singapore.": {
+            cn: "我目前是一名在新加坡虾皮公司就职的软件工程师。"
         },
-        "The reason why I choose this as my career might involve with quite a lot of stuffs but the fun fact is that I'm really passionate about coding.": {
-            cn: "为什么我会选择它为我的职业或许牵涉蛮多的因素，但有趣的事实是我真的非常热衷于编程。"
+        "The reason why I choose to dive into IT field might involve with quite a lot of stuffs but the fun fact is that I'm really passionate about coding.": {
+            cn: "为什么我会选择加入资讯工程领域或许牵涉蛮多的因素，但有趣的事实是我真的非常热衷于编程。"
         },
         "For more information about my background, check it out below:": {
             cn: "关于更多我背景的详情，请查阅下方："

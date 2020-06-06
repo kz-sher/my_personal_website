@@ -10,3 +10,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# For own use
+project_cover_editor.html
+project_cover_editor.css
+
+# For mac
+.DS_Store
