@@ -172,20 +172,32 @@ $(document).ready(function () {
         "Conduct risk assessment against clients' system based on details provided by both client and government": {
             cn: "根据客户方及政府方所提供的资料，对客户系统进行风险评估"
         },
-        "Web Developer": {
-            cn: "网站开发师"
+        "Ski Instructor": {
+            cn: "滑雪教练"
         },
-        "Build simple landing webpage/e-commerce site using WordPress": {
-            cn: "利用WordPress建立简单的展示网页/电子商务网站"
+        "Conduct group/short-term lesson with up to 15 students (aged from 3 - 71)": {
+            cn: "给予团课/短期课程，最高记录为一班15位学生（年龄介于3至71岁）"
         },
-        "Follow up task progress and requirements with clients": {
-            cn: "与客户跟进任务进度及需求"
+        "Assist in setting up the environment for ski competition": {
+            cn: "协助设立滑雪竞赛现场"
         },
-        "Customize web apps using Laravel": {
-            cn: "利用Laravel定制网络应用"
+        "Software Engineer - Backend": {
+            cn: "软件工程师 - 后端"
         },
-        "Nov'17 - Jan'18": {
-            cn: "11月17年 - 1月18年"
+        "Design and develop backend infrastructure": {
+            cn: "设计与开发后端架构"
+        },
+        "Conduct system monitoring and performance optimisation": {
+            cn: "监控系统及优化性能"
+        },
+        "Debug and fix errors": {
+            cn: "锁定漏洞和处理异常"
+        },
+        "Brainstorm new ideas and create some mini-tools for team's day-to-day work": {
+            cn: "构想新点子与创建些团队内部每天所需的小工具"
+        },
+        "More and still learning...": {
+            cn: "还有很多，还在学习呢。。。"
         },
         "Jul'18 - Nov'18": {
             cn: "7月18年 - 11月18年"
@@ -193,8 +205,11 @@ $(document).ready(function () {
         "Dec'18 - Feb'19": {
             cn: "12月18年 - 2月19年"
         },
-        "Jul'19 - Nov'19": {
-            cn: "7月19年 - 11月19年"
+        "Dec'19 - Mar'20": {
+            cn: "12月19年 - 3月20年"
+        },
+        "Jun'20 - Now": {
+            cn: "6月20年 - 现在"
         },
         ".": {
             cn: "。"
