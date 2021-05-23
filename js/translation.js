@@ -214,6 +214,9 @@ $(document).ready(function () {
         ".": {
             cn: "。"
         },
+        "Currently Not Available": {
+            cn: "暂且没有"
+        },
         "Have you ever had a thought of having something that can automate some specific tasks and format outputs into your desired presentation?": {
             cn: "您可曾想过拥有一样快速提高工作效率的东西，即可以自动化地处理一些特定且重复的工作，也可以将其资料显示成您要的模版呢？"
         },

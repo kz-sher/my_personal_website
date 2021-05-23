@@ -676,6 +676,17 @@ html, body {
 	color: rgba(255,255,255,0.9);
 }
 
+.s5 .strike-through-text {
+	text-decoration: line-through;
+}
+
+.s5 .noti-tag {
+	background-color: grey;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+
 /* Animation */
 :root {
     --animation-time: 0.7s; 
