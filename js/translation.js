@@ -17,7 +17,7 @@ $(document).ready(function () {
         },
         "My Blog": {
             cn: "我的部落格"
-        }
+        },
         "My Projects": {
             cn: "我的项目"
         },
