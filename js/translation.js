@@ -15,6 +15,9 @@ $(document).ready(function () {
         "About Me": {
             cn: "我的简介"
         },
+        "My Blog": {
+            cn: "我的部落格"
+        }
         "My Projects": {
             cn: "我的项目"
         },
